@@ -74,5 +74,11 @@ namespace _5051.Controllers
             return View();
         }
 
+
+        //Test
+        public ActionResult TestExample()
+        {
+            return View();
+        }
     }
 }
