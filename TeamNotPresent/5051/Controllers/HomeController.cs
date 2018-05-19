@@ -48,35 +48,35 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// Help/Example page for Shop
+        /// Help/Example page for Game
         /// </summary>
         /// <returns></returns>
-        public ActionResult ShopExample ()
+        public ActionResult  Game()
         {
             return View();
         }
 
         /// <summary>
-        /// Help/Example page for Student View
+        /// Help/Example page for Report
         /// </summary>
         /// <returns></returns>
-        public ActionResult StudentExample()
+        public ActionResult Report()
         {
             return View();
         }
 
         /// <summary>
-        /// Help/Example page for Avatar House
+        /// Help/Example page for ClassSchedule
         /// </summary>
         /// <returns></returns>
-        public ActionResult HouseExample()
+        public ActionResult ClassSchedule()
         {
             return View();
         }
 
 
         //Test
-        public ActionResult TestExample()
+        public ActionResult Checkin()
         {
             return View();
         }
