@@ -1,4 +1,6 @@
-﻿using System;
+﻿using _5051.Backend;
+using _5051.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +15,35 @@ namespace _5051.Controllers
         {
             return View();
         }
+        private StudentViewModel StudentViewModel = new StudentViewModel();
+
+        // The Backend Data source
+        private StudentBackend StudentBackend = StudentBackend.Instance;
+
+        // GET: Student
+        /// <summary>
+        /// Index, the page that shows all the Students
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult StudentHome()
+        {
+            // Load the list of data into the StudentList
+            var myDataList = StudentBackend.Index();
+            var StudentViewModel = new StudentViewModel(myDataList);
+            return View(StudentViewModel);
+        }
+        public ActionResult StudentProfile()
+        {
+            return View();
+        }
+        public ActionResult Home()
+        {
+            return View();
+        }
+        public ActionResult Attnedance()
+        {
+            return View();
+        }
+
     }
 }
