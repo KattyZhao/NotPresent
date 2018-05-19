@@ -1,8 +1,48 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<h3>Shop for cool stuff</h3>
+<style>
+    body, html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+    }
+</style>
 
-<p>See the store</p>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-light-grey w3-grayscale w3-large">
+
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+        <div class="w3-content" style="max-width:700px">
+            <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE REPORTS</span></h5>
+            <p>BePresent System provides various reports to both administrator and students. The system provides insightful reports to the instructor, is compliant with data privacy standards and easy implement. This system also provides reports for students to monitor his/her performance and set up attendance goals. .</p>
+            
+        </div>
+    </div>
+
+    <div class="w3-row w3-container" style="margin:50px 0">
+        <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-amber">
+                <img src="~/Content/img/graphTeacher.jpg" style="width:100%">
+                <h2>Demo for Administrator report</h2>
+                <p>insightful reports to the class.</p>
+            </div>
+        </div>
+
+        <div class="w3-half w3-container">
+            <div class="w3-topbar w3-border-amber">
+                <img src="~/Content/img/graphStudent.jpg" style="width:100%">
+                <h2>Demo for Student Report</h2>
+                <p>Report for his own performance.</p>
+            </div>
+        </div>
+    </div>
+
+
