@@ -2,43 +2,52 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>Welcome to Avatar Atendance</h1>
-    <p class="lead">Earn Points, Level up your Avatar all while attending class.</p>
+<div align="center" class="jumbotron">
+    <h1 style=" font-family : Calibri">Welcome to BePresent</h1>
+    <h1 style=" font-family : Calibri">Attendance System</h1>
+    <p class="lead">Earn Points, Travel the world while attending class.</p>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Each student earns points while attending class, and can use the points to level up their personal Avatar, or shop for items to decorate the Avatar's house.
-        </p>
-        <p>
-            @Html.ActionLink("Avatar Houses", "HouseExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
-    </div>
+    <div class="col-md-12">
 
-    <div class="col-md-4">
-        <h2>Level up</h2>
-        <p>Earn Bonus points to level up your Avatar. Higher level avatars can buy special items, as well as get daily discounts.</p>
-        <p>
-            @Html.ActionLink("Shop", "ShopExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
-    </div>
+        <div class="col-md-6">
+            <h2 style=" font-family : Calibri; font-size : x-large">Game features</h2>
+            <p>
+                Each student earns points while attending class, and travel the word using points.
+            </p>
+            <p>
+                @Html.ActionLink("Game Introduction", "Game", "Home", null, new { @class = "btn btn-primary" })
+            </p>
+        </div>
 
-    <div class="col-md-4">
-        <h2>Track your Progress</h2>
-        <p>View your attendance history, and track your progress over the school year.</p>
-        <p>
-            @Html.ActionLink("Show Me", "StudentExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
+        <div class="col-md-6">
+            <h2 style=" font-family : Calibri; font-size : x-large">Personalize Reporting</h2>
+            <p>Provides detailed attendance report for both students and teachers.</p>
+            <p>
+                @Html.ActionLink("Reports", "Report", "Home", null, new { @class = "btn btn-primary" })
+            </p>
+        </div>
     </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <h2 style=" font-family : Calibri; font-size : x-large">Custom attendance calendar</h2>
+            <p>Adminstrator is able to customize class schedule.</p>
+            <p>Students will get updated simultaneously</p>
+            <p>
+                @Html.ActionLink("Class schedule", "ClassSchedule", "Home", null, new { @class = "btn btn-primary" })
+            </p>
+        </div>
 
-    <div class="col-md-4">
-        <h2>Test</h2>
-        <p>View your attendance history, and track your progress over the school year.</p>
-        <p>
-            @Html.ActionLink("Test", "TestExample", "Home", null, new { @class = "btn btn-primary" })
-        </p>
+        <div class="col-md-6">
+            <h2 style=" font-family : Calibri; font-size : x-large">Quick check in/out system</h2>
+            <p>Easy to use and low time consuming way for students to check in/out.</p>
+            <p>
+                @Html.ActionLink("Quick Check in/out", "Checkin", "Home", null, new { @class = "btn btn-primary" })
+
+            </p>
+        </div>
     </div>
 </div>
