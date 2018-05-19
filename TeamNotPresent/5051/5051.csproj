@@ -232,7 +232,6 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
-    <Content Include="Content\img\Capture.JPG" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -311,8 +310,9 @@
     <Content Include="Views\Kiosk\inConfirmation.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
     <Content Include="Views\Admin\StudentHome.cshtml" />
-    <Content Include="Views\Admin\StudenProfile.cshtml" />
+    <Content Include="Views\Admin\Profile.cshtml" />
     <Content Include="Views\Admin\Attendance.cshtml" />
+    <Content Include="Views\Admin\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,7 +32,7 @@ namespace _5051.Controllers
             var StudentViewModel = new StudentViewModel(myDataList);
             return View(StudentViewModel);
         }
-        public ActionResult StudentProfile()
+        public ActionResult Profile()
         {
             return View();
         }
@@ -40,10 +40,14 @@ namespace _5051.Controllers
         {
             return View();
         }
-        public ActionResult Attnedance()
+        public ActionResult Attendance()
+        {
+            return View();
+        }
+        public ActionResult Add()
         {
             return View();
         }
 
-    }
+    }       
 }
