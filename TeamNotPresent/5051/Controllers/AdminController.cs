@@ -48,6 +48,39 @@ namespace _5051.Controllers
         {
             return View();
         }
+        public ActionResult Report()
+        {
+            return View();
+        }
+        public ActionResult Reportgraph()
+        {
+            return View();
+        }
+        public ActionResult Calendar()
+        {
+            return View();
+        }
+        public ActionResult CalendarAddEvent()
+        {
+            return View();
+
+        }
+        public ActionResult CalendarEvent()
+        {
+            return View();
+        }
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        public ActionResult Delete()
+        {
+            return View();
+        }
+        public ActionResult Print()
+        {
+            return View();
+        }
 
     }       
 }

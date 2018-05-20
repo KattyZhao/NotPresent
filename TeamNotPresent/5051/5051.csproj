@@ -232,7 +232,12 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\cal.png" />
+    <Content Include="Content\img\cal1.png" />
+    <Content Include="Content\img\cal2.png" />
     <Content Include="Content\img\prof.png" />
+    <Content Include="Content\img\rep.png" />
+    <Content Include="Content\img\rep1.png" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -313,6 +318,11 @@
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Print.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Admin\Report.cshtml" />
+    <Content Include="Views\Admin\Reportgraph.cshtml" />
+    <Content Include="Views\Admin\Calendar.cshtml" />
+    <Content Include="Views\Admin\CalendarEvent.cshtml" />
+    <Content Include="Views\Admin\CalendarAddEvent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

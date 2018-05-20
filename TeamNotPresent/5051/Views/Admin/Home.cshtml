@@ -1,60 +1,41 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-<h1 style="font-size:large">BePresent</h1>
-<h2 style="font-size:medium" >Home</h2>
+<h1 style="font-size:large">BePresent
+    </h1>
+<h2 style="font-size:medium">Home</h2>
 <style>
-    .vertical-menu {
-        
-        text-align :center;
-
+    .sidebar-nav-fixed {
+        width: 14%;
     }
-
-        .vertical-menu a {
-            background-color: #eee;
-            color: black;
-            display: block;
-            padding:0;
-            width: 250px;
-            height:100px;
-            text-align: center;
-            font-stretch:expanded;
-            border: solid;
-            text-decoration: none;
-        }
-
-            .vertical-menu a:hover {
-                background-color: #ccc;
-                text-align: center;
-            }
-
-            .vertical-menu a.active {
-                background-color: #4CAF50;
-                color: white;
-                text-align: center;
-            }
 </style>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="sidebar-nav-fixed affix">
+                <div class="well">
+                    <ul class="nav ">
+                        <li class="nav-header"><a href="~/Admin/StudentHome">Students</a></li>
+                        <li class="nav-header"><a href="~/Admin/Report">Report</a></li>
+                        <li class="nav-header"><a href="~/Admin/Calendar">Calendar</a></li>
+                        <li class="nav-header"><a href="~/Admin/Logout">Logout</a></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+        </div>
 
-<div class="vertical-menu" style="text-align:center" >
-    <div class="col-lg-1" style="text-align:center">
-        <div>
-
-            <a href="~/Admin/StudentHome" >Students</a>
-            <a href="~/Admin/Report">Report</a>
-            <a href="~/Admin/Calendar">Calendar</a>
-            <a href="~/Admin/Logout">Logout</a>
+        <div style="text-align:center">
+           
+                @Html.ActionLink("Student Profile", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+            
+        </div>
+       
+        <div style="text-align:center">
+            <div>
+                @Html.ActionLink("Attendance Information", "Attendance", "Admin", null, new { @class = "btn btn-primary" })
+            </div>
         </div>
     </div>
 </div>
-<div style="text-align:center">
-    <div style="column-fill:auto">
-        @Html.ActionLink("Student Profile", "Profile", "Admin", null, new { @class = "btn btn-primary" })
-    </div>
-    </div>
-<br />
-    <div style="text-align:center">
-        <div>
-            @Html.ActionLink("Attendance Information", "Attendance", "Admin", null, new { @class = "btn btn-primary" })
-        </div>
-    </div>
