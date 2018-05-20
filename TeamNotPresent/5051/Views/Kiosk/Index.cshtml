@@ -6,15 +6,17 @@
 
 <h2>Check In</h2>
 
-<div class="container">
-        <div class="">
-            <img src="~/Content/img/stuCheckIn.jpg" width="800" height="600" />
-            <br />
-        </div>
-        <p>
-            @Html.ActionLink("Test", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
-            <a href='@Url.Action("checkInConf", "Kiosk")'>
-                <img src='@Url.Content("~/Content/img/stuCheckIn.jpg")' />
-            </a>
-        </p>
+<div class="">
+    <p>
+        <a href='@Url.Action("checkInConf", "Kiosk")'>
+            <img src='@Url.Content("~/Content/img/checkIn.jpg")' width="800" height="400" />
+        </a>
+    </p>
+</div>
+<div class="">
+    <p>
+        <a href='@Url.Action("checkOutConf", "Kiosk")'>
+            <img src='@Url.Content("~/Content/img/checkOut.jpg")' width="800" height="200" />
+        </a>
+    </p>
 </div>
