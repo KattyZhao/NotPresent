@@ -239,6 +239,7 @@
     <Content Include="Content\img\rep.png" />
     <Content Include="Content\img\rep1.png" />
     <Content Include="Content\img\stuCheckIn.jpg" />
+    <Content Include="Content\img\Student Save Page_Admin.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
