@@ -12,6 +12,9 @@
             <br />
         </div>
         <p>
-            @Html.ActionLink("Test", "TestExample", "Home", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Test", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+            <a href='@Url.Action("checkInConf", "Kiosk")'>
+                <img src='@Url.Content("~/Content/img/stuCheckIn.jpg")' />
+            </a>
         </p>
 </div>

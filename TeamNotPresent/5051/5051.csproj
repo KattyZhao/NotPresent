@@ -235,6 +235,7 @@
     <Content Include="Content\img\cal.png" />
     <Content Include="Content\img\cal1.png" />
     <Content Include="Content\img\cal2.png" />
+    <Content Include="Content\img\Conf_checkIN.jpg" />
     <Content Include="Content\img\prof.png" />
     <Content Include="Content\img\rep.png" />
     <Content Include="Content\img\rep1.png" />
@@ -309,7 +310,7 @@
     <Content Include="Views\Student\Create.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Home\Privacy.cshtml" />
-    <Content Include="Views\Kiosk\inConfirmation.cshtml" />
+    <Content Include="Views\Kiosk\checkInConf.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
     <Content Include="Views\Admin\StudentHome.cshtml" />
     <Content Include="Views\Admin\Profile.cshtml" />

@@ -54,5 +54,9 @@ namespace _5051.Controllers
             StudentBackend.ToggleStatusById(id);
             return RedirectToAction("Index");
         }
+        public ActionResult checkInConf()
+        {
+            return View();
+        }
     }
 }
