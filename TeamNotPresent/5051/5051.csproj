@@ -356,6 +356,7 @@
     <Content Include="Content\img\rep1.png" />
     <Content Include="Content\img\Student Save Page_Admin.jpg" />
     <Content Include="Content\img\Student.jpg" />
+    <Content Include="Content\img\Student.PNG" />
     <Content Include="Content\img\studentreport.PNG" />
     <Content Include="Content\img\stuLogin.jpg" />
     <Content Include="favicon.ico" />
