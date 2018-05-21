@@ -453,6 +453,10 @@
     <Content Include="Views\Student\Postcards.cshtml" />
     <Content Include="Views\Student\Profile.cshtml" />
     <Content Include="Views\Student\Home.cshtml" />
+    <Content Include="Views\Home\Report.cshtml" />
+    <Content Include="Views\Home\Game.cshtml" />
+    <Content Include="Views\Home\ClassSchedule.cshtml" />
+    <Content Include="Views\Home\Checkin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
