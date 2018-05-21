@@ -52,10 +52,7 @@ namespace _5051.Controllers
         {
             return View();
         }
-        public ActionResult Reportgraph()
-        {
-            return View();
-        }
+        
         public ActionResult Calendar()
         {
             return View();
