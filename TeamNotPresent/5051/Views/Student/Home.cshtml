@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
     .w3-sidebar a {
         font-family: "Roboto", sans-serif
@@ -26,60 +27,24 @@
 
     body, h1, h2, h3, h4, h5, h6, .w3-wide {
         font-family: "Inconsolata", sans-serif;
+        
+    html, body{
+        padding: 0;
+        margin: 0;
+        background-color: black;
+    }
 
-   
-
-     /* Popup container - can be anything you want */
-     .popup{
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-     }
-
-/* The actual popup */
-.popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class - hide and show the popup */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
-   
-   
+    #earth_div {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute !important;
+    }
+    
 </style>
 
-<body class="w3-content" style="max-width:1200px"  >
+<body class="w3-content" style="max-width:1200px">
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
@@ -92,8 +57,16 @@
             <a></a>
             <a></a>
             <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
             <a href="~/Student/Profile" class="w3-bar-item w3-button">Profile</a>
-            <a href="~/Student/PostCards"class="w3-bar-item w3-button">PostCards</a>
+            <a href="~/Student/PostCards" class="w3-bar-item w3-button">PostCards</a>
             <a href="~/Student/Attendance" class="w3-bar-item w3-button">Attendance</a>
             <a href="~/Student/Calendar" class="w3-bar-item w3-button">Calendar</a>
             <a href="~/Student/Logout" class="w3-bar-item w3-button">Logout</a>
@@ -131,31 +104,78 @@
             </script>
         </header>
 
+        <!-- reward point -->
         <header class="w3-container w3-median">
             <p></p>
             <p class="w3-right">Reward Point：2000</p>
         </header>
 
-        
-            <div class="popup" onclick="myFunction()">
-                Claim
-                <span class="popuptext" id="myPopup"></span>
-            </div>
+        <!-- button -->
+        <button class=" w3-right" onclick="myFunction()">Claim</button>
+        <p id="demo"></p>
 
+        <script>
+            function myFunction() {
+                var txt;
+                if (confirm("Click to claim your extra reward point")) {
+                    txt = "You have clicked!";
+                } else {
+                    txt = "You pressed Cancel!";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+
+        <!-- earth -->
+        <header>
+            <script src="http://www.webglearth.com/v2/api.js"></script>
             <script>
-                // When the user clicks on div, open the popup
-                function myFunction() {
-                    var popup = document.getElementById("myPopup");
-                    popup.classList.toggle("show");
+                function initialize() {
+                    var earth = new WE.map('earth_div');
+                    WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
+
+                    var marker = WE.marker([51.5, -0.09]).addTo(earth);
+                    marker.bindPopup("<b>London</b><br>You are currently here<br /><span style='font-size:10px;color:#999'>Tip: Another popup is hidden in Cairo..</span>", { maxWidth: 150, closeButton: true }).openPopup();
+
+                    var marker2 = WE.marker([30.058056, 31.228889]).addTo(earth);
+                    marker2.bindPopup("<b>Cairo</b><br>You have travlled before", { maxWidth: 120, closeButton: false });
+
+
+                    earth.setView([51.505, 0], 4);
+
+                    // Start a simple rotation animation
+                    var before = null;
+                    requestAnimationFrame(function animate(now) {
+                        var c = earth.getPosition();
+                        var elapsed = before ? now - before : 0;
+                        before = now;
+                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 30)]);
+                        requestAnimationFrame(animate);
+                    });
+
+
                 }
             </script>
 
+        </header>
 
-        </div>
+        <body onload="initialize()">
+            <div id="earth_div"></div>
+        </body>
 
 
-        </div>
+        <!-- Play button -->
+        <button class=" w3-center" onclick="Play()">Play</button>
+        <script>
+            function Play() {
+   
 
+                var markerCustom = WE.marker([39.9, 116.3]).addTo(earth);
+                markerCustom.bindPopup("<b>Beijing</b><br>You are currently here", { maxWidth: 120, closeButton: true });
 
+            }
+        </script>
+
+        
 
 </body>
