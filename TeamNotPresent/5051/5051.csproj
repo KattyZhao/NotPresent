@@ -335,7 +335,7 @@
     <Content Include="Views\Student\Attendance.cshtml" />
     <Content Include="Views\Student\Calendar.cshtml" />
     <Content Include="Views\Student\Logout.cshtml" />
-    <Content Include="Views\Student\Postcard.cshtml" />
+    <Content Include="Views\Student\Postcards.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
