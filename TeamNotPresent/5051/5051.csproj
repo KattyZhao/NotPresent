@@ -240,11 +240,13 @@
     <Content Include="Content\img\checkOut.jpg" />
     <Content Include="Content\img\Conf_checkIN.jpg" />
     <Content Include="Content\img\Conf_checkOUT.jpg" />
+    <Content Include="Content\img\Postcard.jpg" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="Content\img\prof.png" />
     <Content Include="Content\img\rep.png" />
     <Content Include="Content\img\rep1.png" />
     <Content Include="Content\img\Student Save Page_Admin.jpg" />
+    <Content Include="Content\img\studentreport.PNG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -254,6 +256,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\img\BePresent_Updated wireframes.zip" />
     <None Include="Properties\PublishProfiles\NotPresent - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -329,6 +332,10 @@
     <Content Include="Views\Admin\CalendarEvent.cshtml" />
     <Content Include="Views\Admin\CalendarAddEvent.cshtml" />
     <Content Include="Views\Kiosk\checkOutConf.cshtml" />
+    <Content Include="Views\Student\Attendance.cshtml" />
+    <Content Include="Views\Student\Calendar.cshtml" />
+    <Content Include="Views\Student\Logout.cshtml" />
+    <Content Include="Views\Student\Postcard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
