@@ -340,10 +340,15 @@
     <Content Include="Content\img\cal1.png" />
     <Content Include="Content\img\cal2.png" />
     <Content Include="Content\img\Calendar Week View_Admin.jpg" />
+    <Content Include="Content\img\calendar.jpg" />
+    <Content Include="Content\img\Capture.JPG" />
     <Content Include="Content\img\checkIn.jpg" />
     <Content Include="Content\img\checkOut.jpg" />
     <Content Include="Content\img\Conf_checkIN.jpg" />
     <Content Include="Content\img\Conf_checkOUT.jpg" />
+    <Content Include="Content\img\earth.jpg" />
+    <Content Include="Content\img\graphStudent.jpg" />
+    <Content Include="Content\img\graphTeacher.jpg" />
     <Content Include="Content\img\Postcard.jpg" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="Content\img\prof.png" />
@@ -351,6 +356,7 @@
     <Content Include="Content\img\rep1.png" />
     <Content Include="Content\img\Student Save Page_Admin.jpg" />
     <Content Include="Content\img\studentreport.PNG" />
+    <Content Include="Content\img\stuLogin.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
