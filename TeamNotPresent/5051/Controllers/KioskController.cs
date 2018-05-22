@@ -54,10 +54,12 @@ namespace _5051.Controllers
             StudentBackend.ToggleStatusById(id);
             return RedirectToAction("Index");
         }
+        //method to redirect to a check in conf.
         public ActionResult checkInConf()
         {
             return View();
         }
+        //method to redirect to a cehck out conf.
         public ActionResult checkOutConf()
         {
             return View();

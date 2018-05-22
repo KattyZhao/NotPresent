@@ -346,6 +346,7 @@
     <Content Include="Content\img\checkOut.jpg" />
     <Content Include="Content\img\Conf_checkIN.jpg" />
     <Content Include="Content\img\Conf_checkOUT.jpg" />
+    <Content Include="Content\img\displayPic.jpg" />
     <Content Include="Content\img\earth.jpg" />
     <Content Include="Content\img\graphStudent.jpg" />
     <Content Include="Content\img\graphTeacher.jpg" />

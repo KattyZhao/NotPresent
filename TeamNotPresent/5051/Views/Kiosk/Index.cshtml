@@ -9,9 +9,19 @@
 <div class="">
     <p>
         <a href='@Url.Action("checkInConf", "Kiosk")'>
-            <img src='@Url.Content("~/Content/img/checkIn.jpg")' width="800" height="400" />
+            <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
         </a>
+    <p>
+        @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
     </p>
+    <p>
+        <a href='@Url.Action("checkInConf", "Kiosk")'>
+            <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
+        </a>
+    <p>
+        @Html.ActionLink("Sean", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+    </p>
+
 </div>
 <div class="">
     <p>
