@@ -45,3 +45,9 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
     left: 0;
     position: absolute !important;
 }
+
+/* Display thumbnails next to each other*/
+div1, 
+div2 {
+    display: inline-block;
+}
