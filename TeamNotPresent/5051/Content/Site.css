@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Display thumbnails next to each other*/
+div1, 
+div2 {
+    display: inline-block;
+}

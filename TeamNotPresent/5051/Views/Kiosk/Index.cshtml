@@ -6,21 +6,22 @@
 
 <h2>Check In</h2>
 
-<div class="">
-    <p>
-        <a href='@Url.Action("checkInConf", "Kiosk")'>
-            <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
-        </a>
-    <p>
-        @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
-    </p>
-    <p>
-        <a href='@Url.Action("checkInConf", "Kiosk")'>
-            <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
-        </a>
-    <p>
-        @Html.ActionLink("Sean", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
-    </p>
+<div class="div1">
+
+    <a href='@Url.Action("checkInConf", "Kiosk")'>
+        <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
+    </a>
+    <a href='@Url.Action("checkInConf", "Kiosk")'>
+        <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
+    </a>
+    
+
+</div>  
+<div class="div2">
+
+    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+
+    @Html.ActionLink("Sean", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
 
 </div>
 <div class="">
@@ -30,3 +31,4 @@
         </a>
     </p>
 </div>
+
