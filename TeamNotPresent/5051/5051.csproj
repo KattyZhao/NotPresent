@@ -207,6 +207,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AttendanceModel.cs" />
+    <Compile Include="Models\AdminProfileModel.cs" />
     <Compile Include="Models\AvatarModel.cs" />
     <Compile Include="Models\Enums\StudentStatusEnum.cs" />
     <Compile Include="Models\Enums\DataSourceEnum.cs" />
