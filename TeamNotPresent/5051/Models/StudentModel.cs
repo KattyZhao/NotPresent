@@ -45,17 +45,17 @@ namespace _5051.Models
         public string Address { get; set; }
 
         /// <summary>
+        /// Katty update this 
+        /// </summary>
+        [Display(Name = "Cities", Description = "Cities Purchaged")]
+        public int Cities { get; set; }
+
+        /// <summary>
         /// The number of Tokens the student has, tokens are used in the store, and also to level up
         /// </summary>
         [Display(Name = "Tokens", Description = "Tokens Saved")]
         [Required(ErrorMessage = "Tokens are required")]
         public int Tokens { get; set; }
-
-        /// <summary>
-        /// Katty update this 
-        /// </summary>
-        [Display(Name = "Cities", Description = "Cities Purchaged")]
-        public int Cities { get; set; }
 
         /// <summary>
         /// The defaults for a new student
@@ -65,6 +65,7 @@ namespace _5051.Models
             Id = Guid.NewGuid().ToString();
             Tokens = 100;
             Cities = 0;
+           
         }
 
         /// <summary>
