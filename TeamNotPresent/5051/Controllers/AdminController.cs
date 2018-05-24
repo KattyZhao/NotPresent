@@ -48,7 +48,7 @@ namespace _5051.Controllers
         {
             return View();
         }
-        public ActionResult Add()
+        public ActionResult Create()
         {
             var myData = new StudentModel();
             return View(myData);
@@ -60,7 +60,7 @@ namespace _5051.Controllers
         /// <returns></returns>
         // POST: Avatar/Create
         [HttpPost]
-        public ActionResult Add([Bind(Include=
+        public ActionResult Create([Bind(Include=
                                         "Id,"+
                                         "Name,"+
                                         "PowerId,"+
@@ -85,7 +85,7 @@ namespace _5051.Controllers
 
                     StudentBackend.Create(data);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("StudentHome");
                 }
 
                 // Send back for edit

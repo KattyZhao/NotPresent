@@ -12,7 +12,7 @@
     <div class="row">
 
         @{
-            if (Model.StudentList == null)
+            if (Model.StudentList == null || !Model.StudentList.Any())
             {
                 <br />
                 <p>No Students in the System</p>
@@ -41,7 +41,7 @@
     <br />
     <div class="row">
         <div class="col-sm-2">
-            @Html.ActionLink("Add", "Add", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("Add", "Create", null, new { @class = "btn btn-success" })
         </div>
     </div>
 
