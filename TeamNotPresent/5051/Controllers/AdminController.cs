@@ -75,10 +75,11 @@ namespace _5051.Controllers
         [HttpPost]
         public ActionResult Create([Bind(Include=
                                         "Id,"+
+                                        "Uri,"+
                                         "Name,"+
                                         "PowerId,"+
                                         "PersonalContact,"+
-                                        "GuardianContact,"+
+                                        "GuardianContact," +
                                         "Address,"+
                                         "")] AdminProfileModel data)
         {
@@ -141,12 +142,14 @@ namespace _5051.Controllers
         // POST: Avatar/Update/5
         [HttpPost]
         public ActionResult Update([Bind(Include=
-                                       "Id,"+
-                                        "Name,"+
+                                         "Id,"+ 
+                                         "Uri"+
+                                         "Name,"+
                                         "PowerId,"+
                                         "PersonalContact,"+
                                         "GuardianContact,"+
-                                        "Address,"+
+                                         "Address,"+ 
+                               
                                         "")] AdminProfileModel data)
         {
             try
@@ -165,7 +168,7 @@ namespace _5051.Controllers
 
                     AdminBackend.Update(data);
 
-                    return RedirectToAction("Profile");
+                    return RedirectToAction("StudentHome");
                 }
 
                 // Send back for edit
@@ -191,7 +194,8 @@ namespace _5051.Controllers
         // POST: Avatar/Delete/5
         [HttpPost]
         public ActionResult Delete([Bind(Include=
-                                        "Id,"+
+                                         "Uri"+
+                                       "Id,"+
                                         "Name,"+
                                         "PowerId,"+
                                         "PersonalContact,"+

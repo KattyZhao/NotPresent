@@ -77,7 +77,7 @@
                             @Html.DisplayNameFor(m => m.PowerId)
                         </div>
                         <div class="col-sm-4">
-                            @Html.EditorFor(m => m.PowerId)
+                            @Html.DisplayFor(m => m.PowerId)
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@
                             @Html.DisplayNameFor(m => m.PersonalContact)
                         </div>
                         <div class="col-sm-4">
-                            @Html.EditorFor(m => m.PersonalContact)
+                            @Html.DisplayFor(m => m.PersonalContact)
                         </div>
                     </div>
                     <div class="row">
@@ -94,7 +94,7 @@
                             @Html.DisplayNameFor(m => m.GuardianContact)
                         </div>
                         <div class="col-sm-4">
-                            @Html.EditorFor(m => m.GuardianContact)
+                            @Html.DisplayFor(m => m.GuardianContact)
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@
                             @Html.DisplayNameFor(m => m.Address)
                         </div>
                         <div class="col-sm-4">
-                            @Html.EditorFor(m => m.Address)
+                            @Html.DisplayFor(m => m.Address)
                         </div>
                     </div>
 
@@ -114,13 +114,13 @@
                     <div class="col-md-8">
                         @*<img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />*@
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4 text-right">
                                 @Html.ActionLink("Edit", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4 text-right">
                                 @Html.ActionLink("Print", "Print", "Admin", null, new { @class = "btn btn-primary" })
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4 text-right">
                                 @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
                             </div>
                         </div>

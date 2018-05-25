@@ -134,7 +134,7 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
-            var count = 0;
+          
             Create(new AdminProfileModel("displayPic.jpg", "Police", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
             Create(new AdminProfileModel("displayPic.jpg", "Kunoichi", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
             Create(new AdminProfileModel("displayPic.jpg", "Angry", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
