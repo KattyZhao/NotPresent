@@ -5,30 +5,34 @@
 }
 
 <h2>Check In</h2>
+<table>
+    <tr>
+        <td>
+            <div class="nav3">
+                <div>
+                    <img src="~/Content/img/displayPic.jpg" alt="display pic" style="height : 150px;" />
+                </div>
+                <div class="col-sm-offset-3">
+                    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+                </div>
+                </div>
+        </td>
+    <td>
+    <div class="nav3">
+        <div>
+                <img src="~/Content/img/displayPic.jpg" alt="display pic" style="height : 150px;" />
+            </div>
+            <div class="col-sm-offset-3">
+                @Html.ActionLink("Sean", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </td>
+    </tr>
+</table>
 
-<div class="div1">
-
-    <a href='@Url.Action("checkInConf", "Kiosk")'>
-        <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
+<div class="row">
+    <a href='@Url.Action("checkOutConf", "Kiosk")'>
+        <img src='@Url.Content("~/Content/img/checkOut.jpg")' style="width:100%">
     </a>
-    <a href='@Url.Action("checkInConf", "Kiosk")'>
-        <img src='@Url.Content("~/Content/img/displayPic.jpg")' width="140" height="100" />
-    </a>
-    
-
-</div>  
-<div class="div2">
-
-    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
-
-    @Html.ActionLink("Sean", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
-
-</div>
-<div class="">
-    <p>
-        <a href='@Url.Action("checkOutConf", "Kiosk")'>
-            <img src='@Url.Content("~/Content/img/checkOut.jpg")' width="800" height="200" />
-        </a>
-    </p>
 </div>
 

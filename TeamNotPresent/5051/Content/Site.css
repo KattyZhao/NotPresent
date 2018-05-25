@@ -46,8 +46,12 @@ body, h1, h2, h3, h4, h5, h6, .w3-wide {
     position: absolute !important;
 }
 
-/* Display thumbnails next to each other*/
-div1, 
-div2 {
-    display: inline-block;
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.nav3 {
+    background-color: #E9E8C7;
+    float: left;
+    width: 150px;
+    height: 150px;
+    padding-left: 200px;
 }
