@@ -1,4 +1,4 @@
-﻿
+﻿@model _5051.Models.AdminProfileModel
 @{
     ViewBag.Title = "Delete";
 }
@@ -16,6 +16,9 @@
 
 <div class="container">
     <div class="row">
+      
+              
+         
         <div class="col-md-4">
             <div class="sidebar-nav-fixed affix">
                 <div class="well">
@@ -29,22 +32,82 @@
                 <!--/.well -->
             </div>
         </div>
+        <div class="container">
+            <div class="row">
 
+                @{
+        if (Model == null)
+            {
+            <p>No Avatar</p>
+              }
 
-        <div class="col-md-8">
-            <img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />
+             else
+            {
+            <div class="row">
+                <h2>Delete Avatar</h2>
+                <br />
+                <br />
+
+                <div class="row">
+                    <div class="col-sm-3 text-right">
+                    </div>
+                    <div class="col-sm-2">
+                        <img src="~/Content/img/@Model.Uri" width="75" height="75" />
+                        <br />
+                        <span>
+                            @Model.Name
+                            <br />
+                            <br />
+                            <br />
+                        </span>
+                    </div>
+                </div>
+
+                @using (Html.BeginForm())
+    {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.Uri)
+            @Html.HiddenFor(m => m.Name)
+            @Html.HiddenFor(m => m.PowerId)
+            @Html.HiddenFor(m => m.PersonalContact)
+            @Html.HiddenFor(m => m.GuardianContact)
+            @Html.HiddenFor(m => m.Address)
 
             <div class="row">
-                <div class="col-md-4">
-                    @Html.ActionLink("Delete", "Home", "Admin", null, new { @class = "btn btn-primary" })
+                <div class="col-sm-3 text-right">
                 </div>
-                <div class="col-md-4">
-                    @Html.ActionLink("Cancel", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+                <div class="col-sm-4">
+                    @Html.ActionLink("Cancel", "Home", new { id = Model.Id }, new { @class = "btn btn-success" })
+                    <input type="submit" value="Delete" class="btn btn-danger">
                 </div>
             </div>
-    </div>
+}
+
+            </div>
+}
+
+                }
+            </div>
+        </div>
+
+
+        @*<div class="col-md-8">
+                        <img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                @Html.ActionLink("Delete", "Home", "Admin", null, new { @class = "btn btn-primary" })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.ActionLink("Cancel", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>*@
+
     </div>
 </div>
-
 
 

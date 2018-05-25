@@ -141,16 +141,14 @@ namespace _5051.Controllers
         /// <returns></returns>
         // POST: Avatar/Update/5
         [HttpPost]
-        public ActionResult Update([Bind(Include=
-                                         "Id,"+ 
-                                         "Uri"+
-                                         "Name,"+
-                                        "PowerId,"+
-                                        "PersonalContact,"+
-                                        "GuardianContact,"+
-                                         "Address,"+ 
-                               
-                                        "")] AdminProfileModel data)
+        public ActionResult Update([Bind(Include=  "Id," +
+                                                   "Uri," +
+                                                   "Name," + 
+                                                   "PowerId," +
+                                                   "PersonalContact," +
+                                                   "GuardianContact," +
+                                                   "Address," +
+                                                    "")] AdminProfileModel data)
         {
             try
             {
@@ -168,7 +166,7 @@ namespace _5051.Controllers
 
                     AdminBackend.Update(data);
 
-                    return RedirectToAction("StudentHome");
+                    return RedirectToAction("Home");
                 }
 
                 // Send back for edit
@@ -193,14 +191,14 @@ namespace _5051.Controllers
         /// <returns></returns>
         // POST: Avatar/Delete/5
         [HttpPost]
-        public ActionResult Delete([Bind(Include=
-                                         "Uri"+
-                                       "Id,"+
-                                        "Name,"+
-                                        "PowerId,"+
-                                        "PersonalContact,"+
-                                        "GuardianContact,"+
-                                        "Address,"+
+        public ActionResult Delete([Bind(Include = 
+                                           "Id," +
+                                            "Uri," +
+                                            "Name,"+
+                                            "PowerId,"+
+                                             "PersonalContact,"+
+                                             "GuardianContact,"+
+                                             "Address"+
                                         "")] AdminProfileModel data)
         {
             try
