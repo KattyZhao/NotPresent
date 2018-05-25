@@ -212,6 +212,7 @@
     <Compile Include="Models\AttendanceModel.cs" />
     <Compile Include="Models\AdminProfileModel.cs" />
     <Compile Include="Models\AvatarModel.cs" />
+    <Compile Include="Models\AdminProfileViewModel.cs" />
     <Compile Include="Models\Enums\StudentStatusEnum.cs" />
     <Compile Include="Models\Enums\DataSourceEnum.cs" />
     <Compile Include="Models\MapPinLocationModel.cs" />
@@ -450,10 +451,10 @@
     <Content Include="Views\Kiosk\checkInConf.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
     <Content Include="Views\Admin\StudentHome.cshtml" />
-    <Content Include="Views\Admin\Profile.cshtml" />
+    <Content Include="Views\Admin\Read.cshtml" />
     <Content Include="Views\Admin\Attendance.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Update.cshtml" />
     <Content Include="Views\Admin\Print.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Admin\Report.cshtml" />

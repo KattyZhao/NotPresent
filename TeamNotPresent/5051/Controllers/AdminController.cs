@@ -10,36 +10,46 @@ namespace _5051.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
+        // A ViewModel used for the Avatar that contains the AvatarList
+        private AdminProfileViewModel AdminProfileViewModel = new AdminProfileViewModel();
+
+        // The Backend Data source
+        private AdminBackend AdminBackend = AdminBackend.Instance;
+
+        // GET: Avatar
+        /// <summary>
+        /// Index, the page that shows all the avatars
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
         }
-        private StudentViewModel StudentViewModel = new StudentViewModel();
-
-        // The Backend Data source
-        private StudentBackend StudentBackend = StudentBackend.Instance;
-
-        // GET: Student
-        /// <summary>
-        /// Index, the page that shows all the Students
-        /// </summary>
-        /// <returns></returns>
         public ActionResult StudentHome()
         {
-            // Load the list of data into the StudentList
-            var myDataList = StudentBackend.Index();
-            var StudentViewModel = new StudentViewModel(myDataList);
-            return View(StudentViewModel);
+            // Load the list of data into the AvatarList
+            AdminProfileViewModel.StudentList = AdminBackend.StudentHome();
+            return View(AdminProfileViewModel);
         }
-         // GET: Avatar/Details/5
-        public ActionResult Profile(string id = null)
-          {
-                var myData = StudentBackend.Read(id);
-                return View(myData);
-          }
 
-         
+        /// <summary>
+        /// Read information on a single avatar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        // GET: Avatar/Details/5
+        public ActionResult Read(string id = null)
+        {
+            var myData = AdminBackend.Read(id);
+            return View(myData);
+        }
+
+        /// <summary>
+        /// This opens up the make a new Avatar screen
+        /// </summary>
+        /// <returns></returns>
+        // GET: Avatar/Create
+
         public ActionResult Home()
         {
             return View();
@@ -48,11 +58,14 @@ namespace _5051.Controllers
         {
             return View();
         }
+
+        // GET: Avatar/Create
         public ActionResult Create()
         {
-            var myData = new StudentModel();
+            var myData = new AdminProfileModel();
             return View(myData);
         }
+
         /// <summary>
         /// Make a new avatar sent in by the create avatar screen
         /// </summary>
@@ -67,7 +80,7 @@ namespace _5051.Controllers
                                         "PersonalContact,"+
                                         "GuardianContact,"+
                                         "Address,"+
-                                        "")] StudentModel data)
+                                        "")] AdminProfileModel data)
         {
             try
             {
@@ -83,7 +96,7 @@ namespace _5051.Controllers
                         return View(data);
                     }
 
-                    StudentBackend.Create(data);
+                    AdminBackend.Create(data);
 
                     return RedirectToAction("StudentHome");
                 }
@@ -101,7 +114,7 @@ namespace _5051.Controllers
         {
             return View();
         }
-        
+
         public ActionResult Calendar()
         {
             return View();
@@ -115,9 +128,9 @@ namespace _5051.Controllers
         {
             return View();
         }
-        public ActionResult Edit(string id = null)
+        public ActionResult Update(string id = null)
         {
-            var myData = StudentBackend.Read(id);
+            var myData = AdminBackend.Read(id);
             return View(myData);
         }
         /// <summary>
@@ -127,14 +140,14 @@ namespace _5051.Controllers
         /// <returns></returns>
         // POST: Avatar/Update/5
         [HttpPost]
-        public ActionResult Edit([Bind(Include=
+        public ActionResult Update([Bind(Include=
                                        "Id,"+
                                         "Name,"+
                                         "PowerId,"+
                                         "PersonalContact,"+
                                         "GuardianContact,"+
                                         "Address,"+
-                                        "")] StudentModel data)
+                                        "")] AdminProfileModel data)
         {
             try
             {
@@ -150,9 +163,9 @@ namespace _5051.Controllers
                         return View(data);
                     }
 
-                    StudentBackend.Update(data);
+                    AdminBackend.Update(data);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Profile");
                 }
 
                 // Send back for edit
@@ -166,7 +179,7 @@ namespace _5051.Controllers
 
         public ActionResult Delete(string id = null)
         {
-            var myData = StudentBackend.Read(id);
+            var myData = AdminBackend.Read(id);
             return View(myData);
         }
 
@@ -184,7 +197,7 @@ namespace _5051.Controllers
                                         "PersonalContact,"+
                                         "GuardianContact,"+
                                         "Address,"+
-                                        "")] StudentModel data)
+                                        "")] AdminProfileModel data)
         {
             try
             {
@@ -200,9 +213,9 @@ namespace _5051.Controllers
                         return View(data);
                     }
 
-                    StudentBackend.Delete(data.Id);
+                    AdminBackend.Delete(data.Id);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("StudentHome");
                 }
 
                 // Send back for edit
@@ -220,5 +233,6 @@ namespace _5051.Controllers
             return View();
         }
 
-    }       
+
+    }
 }

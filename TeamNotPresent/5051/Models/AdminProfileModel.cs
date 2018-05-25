@@ -13,13 +13,17 @@ namespace _5051.Models
     /// </summary>
     public class AdminProfileModel
     {
-        [Display(Name = "Name", Description = "Student Name")]
-        [Required(ErrorMessage = "Name is required")]
-        public string Name { get; set; }
-
         [Display(Name = "Student ID", Description = "Student's School Id")]
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
+
+        [Display(Name = "Uri", Description = "Picture to Show")]
+        [Required(ErrorMessage = "Picture is required")]
+        public string Uri { get; set; }
+
+        [Display(Name = "Name", Description = "Student Name")]
+        [Required(ErrorMessage = "Name is required")]
+        public string Name { get; set; }
 
         [Display(Name = "Power ID", Description = "Scholl's Previous System ID")]
         [Required(ErrorMessage = "PowerId is required")]
@@ -58,12 +62,12 @@ namespace _5051.Models
         /// <param name="uri">The Picture path</param>
         /// <param name="name">Avatar Name</param>
         /// <param name="description">Avatar Description</param>
-        public AdminProfileModel(string name, string id, string powerid, string personalcontact, string guardiancontact, string address)
+        public AdminProfileModel(string uri, string name, string powerid, string personalcontact, string guardiancontact, string address)
         {
             Initialize();
 
+            Uri = uri;
             Name = name;
-            Id = id ;
             PowerId = powerid;
             PersonalContact = personalcontact;
             GuardianContact = guardiancontact;

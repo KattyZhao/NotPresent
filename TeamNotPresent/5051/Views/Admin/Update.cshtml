@@ -1,10 +1,7 @@
 ﻿@model _5051.Models.AdminProfileModel
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Update";
 }
-
-
-
 <h1 style="font-size:large">
     BePresent
     </>
@@ -33,21 +30,11 @@
             </div>
         </div>
 
-        <br />
-        <br />
-
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
             @Html.HiddenFor(m => m.Id)
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                    @Html.DisplayNameFor(m => m.Name)
-                </div>
-                <div class="col-sm-2">
-                    @Html.EditorFor(m => m.Name)
-                </div>
-            </div>
+
             <div class="row">
                 <div class="col-sm-3 text-right">
                     @Html.DisplayNameFor(m => m.Uri)
@@ -57,6 +44,16 @@
                 </div>
             </div>
 
+
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.Name)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.Name)
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-sm-3 text-right">
@@ -93,6 +90,14 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-sm-3 text-right">
+                    @Html.DisplayNameFor(m => m.Uri)
+                </div>
+                <div class="col-sm-2">
+                    @Html.EditorFor(m => m.Uri)
+                </div>
+            </div>
             @*<br />
                 <br />
                 <div class="row">
@@ -113,7 +118,7 @@
                 </div>
                 <div class="col-md-4">
                     @Html.ActionLink("Cancel", "Read", new { id = Model.Id }, new { @class = "btn btn-success" })
-                    <input type="submit" value="Save" class="btn btn-primary">
+                    <input type="submit" value="Update" class="btn btn-primary">
                     @*Html.ActionLink("Save", "StudentHome", "Admin", null, new { @class = "btn btn-primary" })*@
                     @*</div>
                         <div class="col-md-4">*@
@@ -126,7 +131,19 @@
     </div>
 </div>
 
-
+@*<div class="col-md-8">
+        <img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />
+        <div class="row">
+            <div class="col-md-4">
+                @Html.ActionLink("Save", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+            </div>
+            <div class="col-md-4">
+                @Html.ActionLink("Cancel", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>*@
 
 
 

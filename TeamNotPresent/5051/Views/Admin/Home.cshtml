@@ -1,8 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-<h1 style="font-size:large">BePresent
-    </h1>
+<h1 style="font-size:large">
+    BePresent
+</h1>
 <h2 style="font-size:medium">Home</h2>
 <style>
     .sidebar-nav-fixed {
@@ -26,15 +27,22 @@
             </div>
         </div>
 
-        <div class="col-md-8">            
+        <div class="col-md-8">
             <div class="row">
                 <div class="col-md-6">
-                    @Html.ActionLink("Student Profile", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+                    @{
+                        string urlpart = HttpContext.Current.Request.Url.AbsoluteUri;
+                        urlpart = urlpart.Split('/').Last();
+
+                    }
+
+                    <a id="Student Profile" href="~/Admin/Read/@urlpart" class="btn btn-primary">Student Profile</a>
+                    @*@Html.ActionLink("Student Profile", "Read", "Admin",null, new { @class = "btn btn-primary" })*@
                 </div>
                 <div class="col-md-6">
                     @Html.ActionLink("Attendance Information", "Attendance", "Admin", null, new { @class = "btn btn-primary" })
-                </div>                
+                </div>
             </div>
-        </div>        
+        </div>
     </div>
 </div>
