@@ -86,6 +86,17 @@ namespace _5051.Backend
         }
 
         /// <summary>
+        /// Return the data for the id passed in
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Null or valid data</returns>
+        public StudentModel GetDefault()
+        {
+            var myReturn = DataSource.GetDefault();
+            return myReturn;
+        }
+
+        /// <summary>
         /// Update all attributes to be what is passed in
         /// </summary>
         /// <param name="data"></param>
@@ -104,6 +115,7 @@ namespace _5051.Backend
                 return null;
             }
 
+            /// Katty need to put Status back into StudentModel and then uncomment this out.
             //if (myData.Status != data.Status)
             //{
             //    // Status Changed, need to process the status change
@@ -153,6 +165,7 @@ namespace _5051.Backend
                 return;
             }
 
+            //Katty need to put status and enum back into the code, and then uncomment this
             //data.Status = StudentStatusEnum.In;
 
             // TODO:  Make call to the Attendance Log, to track when the student logged In.
@@ -170,7 +183,8 @@ namespace _5051.Backend
                 return;
             }
 
-            //data.Status = StudentStatusEnum.Out;
+            /// katty One more to fix.
+            ///data.Status = StudentStatusEnum.Out;
 
             // TODO:  Make call to the Attendance Log, to track when the student logged out.
         }
@@ -206,6 +220,7 @@ namespace _5051.Backend
                 return;
             }
 
+            // Katty fix this
             //switch (data.Status)
             //{
             //    case StudentStatusEnum.In:

@@ -32,4 +32,23 @@ namespace _5051.Models
             }
         }
     }
+
+    public class StudentClaimViewModel
+    {
+        public string StudentId { get; set; }
+        public string Points { get; set; }
+        public string StudentOwnedPins { get; set; }
+
+    }
+
+    public class StudentHomeViewModel
+    {
+        public StudentModel Student;
+        public List<MapPinLocationModel> MapPinLocationsList;
+
+        public StudentHomeViewModel()
+        {
+            MapPinLocationsList = new List<MapPinLocationModel>();
+        }
+    }
 }

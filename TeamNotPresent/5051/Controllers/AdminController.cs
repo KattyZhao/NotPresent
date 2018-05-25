@@ -32,14 +32,10 @@ namespace _5051.Controllers
             var StudentViewModel = new StudentViewModel(myDataList);
             return View(StudentViewModel);
         }
-         // GET: Avatar/Details/5
-        public ActionResult Profile(string id = null)
-          {
-                var myData = StudentBackend.Read(id);
-                return View(myData);
-          }
-
-         
+        public ActionResult Profile()
+        {
+            return View();
+        }
         public ActionResult Home()
         {
             return View();
@@ -48,55 +44,10 @@ namespace _5051.Controllers
         {
             return View();
         }
-        public ActionResult Create()
+        public ActionResult Add()
         {
-            var myData = new StudentModel();
-            return View(myData);
+            return View();
         }
-        /// <summary>
-        /// Make a new avatar sent in by the create avatar screen
-        /// </summary>
-        /// <param name="collection"></param>
-        /// <returns></returns>
-        // POST: Avatar/Create
-        [HttpPost]
-        public ActionResult Create([Bind(Include=
-                                        "Id,"+
-                                        "Name,"+
-                                        "PowerId,"+
-                                        "PersonalContact,"+
-                                        "GuardianContact,"+
-                                        "Address,"+
-                                        "")] StudentModel data)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    if (data == null)
-                    {
-                        return RedirectToAction("Error", new { route = "Home", action = "Error" });
-                    }
-
-                    if (string.IsNullOrEmpty(data.Id))
-                    {
-                        return View(data);
-                    }
-
-                    StudentBackend.Create(data);
-
-                    return RedirectToAction("StudentHome");
-                }
-
-                // Send back for edit
-                return View(data);
-            }
-            catch
-            {
-                return RedirectToAction("Error", new { route = "Home", action = "Error" });
-            }
-        }
-
         public ActionResult Report()
         {
             return View();
@@ -115,106 +66,14 @@ namespace _5051.Controllers
         {
             return View();
         }
-        public ActionResult Edit(string id = null)
+        public ActionResult Edit()
         {
-            var myData = StudentBackend.Read(id);
-            return View(myData);
+            return View();
         }
-        /// <summary>
-        /// This updates the avatar based on the information posted from the udpate page
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        // POST: Avatar/Update/5
-        [HttpPost]
-        public ActionResult Edit([Bind(Include=
-                                       "Id,"+
-                                        "Name,"+
-                                        "PowerId,"+
-                                        "PersonalContact,"+
-                                        "GuardianContact,"+
-                                        "Address,"+
-                                        "")] StudentModel data)
+        public ActionResult Delete()
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    if (data == null)
-                    {
-                        return RedirectToAction("Error", new { route = "Home", action = "Error" });
-                    }
-
-                    if (string.IsNullOrEmpty(data.Id))
-                    {
-                        return View(data);
-                    }
-
-                    StudentBackend.Update(data);
-
-                    return RedirectToAction("Index");
-                }
-
-                // Send back for edit
-                return View(data);
-            }
-            catch
-            {
-                return RedirectToAction("Error", new { route = "Home", action = "Error" });
-            }
+            return View();
         }
-
-        public ActionResult Delete(string id = null)
-        {
-            var myData = StudentBackend.Read(id);
-            return View(myData);
-        }
-
-        /// <summary>
-        /// This deletes the avatar sent up as a post from the avatar delete page
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        // POST: Avatar/Delete/5
-        [HttpPost]
-        public ActionResult Delete([Bind(Include=
-                                        "Id,"+
-                                        "Name,"+
-                                        "PowerId,"+
-                                        "PersonalContact,"+
-                                        "GuardianContact,"+
-                                        "Address,"+
-                                        "")] StudentModel data)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    if (data == null)
-                    {
-                        return RedirectToAction("Error", new { route = "Home", action = "Error" });
-                    }
-
-                    if (string.IsNullOrEmpty(data.Id))
-                    {
-                        return View(data);
-                    }
-
-                    StudentBackend.Delete(data.Id);
-
-                    return RedirectToAction("Index");
-                }
-
-                // Send back for edit
-                return View(data);
-            }
-            catch
-            {
-                return RedirectToAction("Error", new { route = "Home", action = "Error" });
-            }
-
-        }
-
         public ActionResult Print()
         {
             return View();

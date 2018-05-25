@@ -23,8 +23,25 @@ textarea {
     max-width: 280px;
 }
 
-/* Display thumbnails next to each other*/
-div1, 
-div2 {
-    display: inline-block;
+
+.w3-sidebar a {
+    font-family: "Roboto", sans-serif
+}
+
+body, h1, h2, h3, h4, h5, h6, .w3-wide {
+    font-family: "Inconsolata", sans-serif;
+    html, body
+
+{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#earth_div {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute !important;
 }

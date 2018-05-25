@@ -1,50 +1,11 @@
-﻿
+﻿@model _5051.Models.StudentHomeViewModel
 @{
     ViewBag.Title = "Home";
 }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-    .w3-sidebar a {
-        font-family: "Roboto", sans-serif
-    }
-
-    body, h1, h2, h3, h4, h5, h6, .w3-wide {
-        font-family: "Inconsolata", sans-serif;
-        
-    html, body{
-        padding: 0;
-        margin: 0;
-        background-color: black;
-    }
-
-    #earth_div {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        position: absolute !important;
-    }
-    
-</style>
 
 <body class="w3-content" style="max-width:1200px">
+
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
@@ -86,7 +47,7 @@
         <!-- Top header -->
         <header class="w3-container w3-xlarge">
             <p></p>
-            <p class="w3-left">Welcome, Diamond</p>
+            <p class="w3-left">Welcome, @Model.Student.Name</p>
         </header>
 
         <header class=" w3-right w3-median">
@@ -107,7 +68,7 @@
         <!-- reward point -->
         <header class="w3-container w3-median">
             <p></p>
-            <p class="w3-right">Reward Point：2000</p>
+            <p class="w3-right">Reward Point：@Model.Student.Tokens</p>
         </header>
 
         <!-- button -->
@@ -134,27 +95,48 @@
                     var earth = new WE.map('earth_div');
                     WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
-                    var marker = WE.marker([51.5, -0.09]).addTo(earth);
-                    marker.bindPopup("<b>London</b><br>You are currently here<br /><span style='font-size:10px;color:#999'>Tip: Another popup is hidden in Cairo..</span>", { maxWidth: 150, closeButton: true }).openPopup();
 
-                    var marker2 = WE.marker([30.058056, 31.228889]).addTo(earth);
-                    marker2.bindPopup("<b>Cairo</b><br>You have travlled before", { maxWidth: 120, closeButton: false });
+                @{
+                    var count = 1;
+                    var DblQuote = Convert.ToChar(34);
+                    foreach (var pin in Model.MapPinLocationsList)
+                    {
 
+                        // Need to build the pins propertly
+                        // Need to set the Color
+                        // Need to set the Picture
 
-                    earth.setView([51.505, 0], 4);
-
-                    // Start a simple rotation animation
-                    var before = null;
-                    requestAnimationFrame(function animate(now) {
-                        var c = earth.getPosition();
-                        var elapsed = before ? now - before : 0;
-                        before = now;
-                        earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 30)]);
-                        requestAnimationFrame(animate);
-                    });
+                        var line1 = "var marker" + count + "= WE.marker([" + pin.Latitude + "," + pin.Longitude + "]).addTo(earth);";
+                        var line2 = "marker" + count + ".bindPopup(";
 
 
+                        var line3 = DblQuote + "<div style=''><b>" + pin.Heading + "</b><br>Body</br><img src='" + pin.Uri + "' height=25 width=auto/></div>" + DblQuote;
+                        var line4 = ", { maxWidth: 120, closeButton: false });";
+                        //var line2 = "marker" + count + ".bindPopup(" + '"' + pin.Heading + '"' + ", { maxWidth: 120, closeButton: false });";
+                        count++;
+                        var output = line2 + line3 + line4;
+
+                        @line1
+                        @Html.Raw(output);
+                    }
                 }
+
+
+                earth.setView([51.505, 0], 4);
+
+
+                // Start a simple rotation animation
+                //var before = null;
+                //requestAnimationFrame(function animate(now) {
+                    //var c = earth.getPosition();
+                    //var elapsed = before ? now - before : 0;
+                    //before = now;
+                    //earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 30)]);
+                    //requestAnimationFrame(animate);
+                //});
+
+
+                            }
             </script>
 
         </header>
@@ -163,12 +145,25 @@
             <div id="earth_div"></div>
         </body>
 
+        @{
+            // If no points, then don't show the buy button
+            if (Model.Student.Tokens > 0)
+            {
+                using (Html.BeginForm("BuyPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.Hidden("StudentId", Model.Student.Id)
 
+                    <input type="submit" value="Play" class="btn btn-primary">
+                }
+
+            }
+        }
         <!-- Play button -->
-        <button class=" w3-center" onclick="Play()">Play</button>
+        @*<button class=" w3-center" onclick="Play()">Play</button>*@
         <script>
             function Play() {
-   
+
 
                 var markerCustom = WE.marker([39.9, 116.3]).addTo(earth);
                 markerCustom.bindPopup("<b>Beijing</b><br>You are currently here", { maxWidth: 120, closeButton: true });
@@ -176,6 +171,40 @@
             }
         </script>
 
-        
+
+        <div>
+            Cities Owned<br />
+            @{
+                count = 0;
+                foreach (var pin in Model.MapPinLocationsList)
+                {
+                    if (count < Model.Student.Cities)
+                    {
+                        @pin.Heading<br />
+                        count++;
+                    }
+                }
+            }
+        </div>
+        <br />
+        <br />
+
+        <div>
+            Cities To Buy<br />
+            @{
+                count = 0;
+                foreach (var pin in Model.MapPinLocationsList)
+                {
+                    if (count > Model.Student.Cities)
+                    {
+                        @pin.Heading<br />
+                    }
+                    count++;
+                }
+            }
+        </div>
+
+    </div>
+
 
 </body>
