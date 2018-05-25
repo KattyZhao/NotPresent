@@ -342,6 +342,7 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\card5.png" />
     <Content Include="Content\img\cal.png" />
     <Content Include="Content\img\cal1.png" />
     <Content Include="Content\img\cal2.png" />
@@ -356,7 +357,10 @@
     <Content Include="Content\img\earth.jpg" />
     <Content Include="Content\img\graphStudent.jpg" />
     <Content Include="Content\img\graphTeacher.jpg" />
+    <Content Include="Content\img\card2.png" />
+    <Content Include="Content\img\card3bw.png" />
     <Content Include="Content\img\Postcard.jpg" />
+    <Content Include="Content\img\card1.png" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="Content\img\prof.png" />
     <Content Include="Content\img\rep.png" />
@@ -366,6 +370,7 @@
     <Content Include="Content\img\Student.PNG" />
     <Content Include="Content\img\studentreport.PNG" />
     <Content Include="Content\img\stuLogin.jpg" />
+    <Content Include="Content\img\card4bw.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
