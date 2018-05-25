@@ -24,40 +24,25 @@ namespace _5051.Models
         [Required(ErrorMessage = "Id is required")]
         public string Id { get; set; }
 
-        /// <summary>
-        /// The Friendly name for the student, does not need to be directly associated with the actual student name
-        /// </summary>
-        [Display(Name = "Name", Description = "Nick Name")]
+        [Display(Name = "Name", Description = "Student Name")]
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
-        /// <summary>
-        /// The ID of the Avatar the student is associated with, this will convert to an avatar picture
-        /// </summary>
-        [Display(Name = "AvatarId", Description = "Avatar")]
-        [Required(ErrorMessage = "Avatar is required")]
-        public string AvatarId { get; set; }
+        [Display(Name = "Power ID", Description = "Scholl's Previous System ID")]
+        [Required(ErrorMessage = "PowerId is required")]
+        public string PowerId { get; set; }
 
-        /// <summary>
-        /// The personal level for the Avatar, the avatar levels up.  switching the avatar ID (picture), does not change the level
-        /// </summary>
-        [Display(Name = "Avatar Level", Description = "Level of the Avatar")]
-        [Required(ErrorMessage = "Level is required")]
-        public int AvatarLevel { get; set; }
+        [Display(Name = "Student Contact", Description = "Personal Phone Number")]
+        [Required(ErrorMessage = "Student Contact is required")]
+        public string PersonalContact { get; set; }
 
-        /// <summary>
-        /// The number of Tokens the student has, tokens are used in the store, and also to level up
-        /// </summary>
-        [Display(Name = "Tokens", Description = "Tokens Saved")]
-        [Required(ErrorMessage = "Tokens are required")]
-        public int Tokens { get; set; }
+        [Display(Name = "Guardian Contact", Description = "Parent's Phone Number")]
+        [Required(ErrorMessage = "Guardian Contact is required")]
+        public string GuardianContact { get; set; }
 
-        /// <summary>
-        /// The status of the student, for example currently logged in, out
-        /// </summary>
-        [Display(Name = "Current Status", Description = "Status of the Student")]
-        [Required(ErrorMessage = "Status is required")]
-        public StudentStatusEnum Status { get; set; }
+        [Display(Name = "Address", Description = "Current Address")]
+        [Required(ErrorMessage = "Address is required")]
+        public string Address { get; set; }
 
         /// <summary>
         /// The defaults for a new student
@@ -65,9 +50,7 @@ namespace _5051.Models
         public void Initialize()
         {
             Id = Guid.NewGuid().ToString();
-            Tokens = 0;
-            AvatarLevel = 0;
-            Status = StudentStatusEnum.Out;
+           
         }
 
         /// <summary>
@@ -82,19 +65,14 @@ namespace _5051.Models
         /// Constructor for Student.  Call this when making a new student
         /// </summary>
         /// <param name="name">The Name to call the student</param>
-        /// <param name="avatarId">The avatar to use, if not specified, will call the backend to get an ID</param>
-        public StudentModel(string name, string avatarId)
+        /// <param name="studentId">The avatar to use, if not specified, will call the backend to get an ID</param>
+        public StudentModel(string name, string studentId)
         {
             Initialize();
 
             Name = name;
 
-            // If no avatar ID is sent in, then go and get the first avatar ID from the backend data as the default to use.
-            if (string.IsNullOrEmpty(avatarId))
-            {
-                avatarId = AvatarBackend.Instance.GetFirstAvatarId();
-            }
-            AvatarId = avatarId;
+            
         }
 
         /// <summary>
@@ -103,13 +81,14 @@ namespace _5051.Models
         /// <param name="data">The student data to pull</param>
         public StudentModel(StudentDisplayViewModel data)
         {
+            
+
             Id = data.Id;
             Name = data.Name;
-
-            AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
-            Status = data.Status;
+            PowerId = data.PowerId;
+            PersonalContact = data.PersonalContact;
+            GuardianContact = data.GuardianContact;
+            Address = data.Address;
         }
 
         /// <summary>
@@ -125,10 +104,10 @@ namespace _5051.Models
             }
 
             Name = data.Name;
-            AvatarId = data.AvatarId;
-            AvatarLevel = data.AvatarLevel;
-            Tokens = data.Tokens;
-            Status = data.Status;
+            PowerId = data.PowerId;
+            PersonalContact = data.PersonalContact;
+            GuardianContact = data.GuardianContact;
+            Address = data.Address;
 
             return true;
         }
@@ -142,20 +121,8 @@ namespace _5051.Models
         /// <summary>
         /// The path to the local image for the avatar
         /// </summary>
-        [Display(Name = "Avatar Picture", Description = "Avatar Picture to Show")]
-        public string AvatarUri { get; set; }
-
-        /// <summary>
-        /// Display name for the Avatar on the student information (Friendly Police etc.)
-        /// </summary>
-        [Display(Name = "Avatar Name", Description = "Avatar Name")]
-        public string AvatarName { get; set; }
-
-        /// <summary>
-        /// Description of the Avatar to show on the student information
-        /// </summary>
-        [Display(Name = "Avatar Description", Description = "Avatar Description")]
-        public string AvatarDescription { get; set; }
+        [Display(Name = "Student Picture", Description = "Student Picture to Show")]
+        public string DisplayPicture { get; set; }
 
         /// <summary>
         /// Default constructor
@@ -170,21 +137,10 @@ namespace _5051.Models
         {
             Id = data.Id;
             Name = data.Name;
-            Tokens = data.Tokens;
-            AvatarLevel = data.AvatarLevel;
-            AvatarId = data.AvatarId;
-            Status = data.Status;
-
-            var myDataAvatar = AvatarBackend.Instance.Read(AvatarId);
-            if (myDataAvatar == null)
-            {
-                // Nothing to convert
-                return;
-            }
-
-            AvatarName = myDataAvatar.Name;
-            AvatarDescription = myDataAvatar.Description;
-            AvatarUri = myDataAvatar.Uri;
+            PowerId = data.PowerId;
+            PersonalContact = data.PersonalContact;
+            GuardianContact = data.GuardianContact;
+            Address = data.Address;
         }
     }
 }

@@ -12,7 +12,7 @@
     <div class="row">
 
         @{
-            if (Model.StudentList == null)
+            if (Model.StudentList == null || !Model.StudentList.Any())
             {
                 <br />
                 <p>No Students in the System</p>
@@ -24,7 +24,7 @@
                 {
                     <a id="@item.Id" href="~/Admin/Home/@item.Id">
                         <div class="col-sm-2">
-                            <img src="~/Content/img/@item.AvatarUri" width="75" height="75" />
+                            <img src="~/Content/img/displayPic.jpg" width="75" height="75" />
                             <br />
                             <span>
                                 @item.Name
@@ -41,7 +41,7 @@
     <br />
     <div class="row">
         <div class="col-sm-2">
-            @Html.ActionLink("Add", "Add", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("Add", "Create", null, new { @class = "btn btn-success" })
         </div>
     </div>
 
