@@ -1,38 +1,58 @@
-﻿@model _5051.Models.StudentViewModel
+﻿
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+
+@model _5051.Models.StudentViewModel
 
 @{
     ViewBag.Title = "Index";
 }
 
+
 <h2>Check In</h2>
-<table>
-    <tr>
-        <td>
-            <div class="nav3">
-                <div>
-                    <img src="~/Content/img/displayPic.jpg" alt="display pic" style="height : 150px;" />
-                </div>
-                <div class="col-sm-offset-3">
-                    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
-                </div>
-                </div>
-        </td>
-    <td>
-    <div class="nav3">
-        <div>
-                <img src="~/Content/img/displayPic.jpg" alt="display pic" style="height : 150px;" />
+
+
+<body>
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-4 text-center">
+                <img class="img-rounded" src="~/Content/img/displayPic.jpg" alt="display pic" style="width:150px;height:150px"/>
             </div>
-            <div class="col-sm-offset-3">
-                @Html.ActionLink("Sean", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+            <div class="col-md-4 text-center">
+                <div class="img-rounded">
+                    <img class="img-rounded" src="~/Content/img/displayPic.jpg" alt="display pic" style="width:150px;height:150px" />
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img class="img-rounded" src="~/Content/img/displayPic.jpg" alt="display pic" style="width:150px;height:150px"/>
             </div>
         </div>
-    </td>
-    </tr>
-</table>
+    </div>
+    <div class="container">
 
-<div class="row">
-    <a href='@Url.Action("checkOutConf", "Kiosk")'>
-        <img src='@Url.Content("~/Content/img/checkOut.jpg")' style="width:100%">
-    </a>
-</div>
+            <div class="row">
 
+                <div class="col-md-4 text-center">
+                    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+                </div>
+                <div class="col-md-4 text-center">
+                    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+                </div>
+                <div class="col-md-4 text-center">
+                    @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+                </div>
+        </div>
+    </div>
+
+    <!-- CLEAR FLOAT -->
+    <div class="clearfix"></div>
+
+
+
+    <div class="container">
+        <a href='@Url.Action("checkOutConf", "Kiosk")'>
+            <img src='@Url.Content("~/Content/img/checkOut.jpg")' style="width:100%">
+        </a>
+    </div>
+
+</body>
