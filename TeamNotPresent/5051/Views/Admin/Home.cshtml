@@ -10,26 +10,124 @@
         width: 14%;
     }
 </style>
+<style>
+    .boxed-grey {
+        background: #f9f9f9;
+        padding: 20px;
+    }
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="sidebar-nav-fixed affix">
-                <div class="well">
-                    <ul class="nav ">
-                        <li class="nav-header"><a href="~/Admin/StudentHome">Students</a></li>
-                        <li class="nav-header"><a href="~/Admin/Report">Report</a></li>
-                        <li class="nav-header"><a href="~/Admin/StudentCalendar">Calendar</a></li>
-                        <li class="nav-header"><a href="~/Admin/Logout">Logout</a></li>
-                    </ul>
-                </div>
-                <!--/.well -->
-            </div>
-        </div>
+    .team h5 {
+        margin-bottom: 10px;
+    }
+
+    .team p.subtitle {
+        margin-bottom: 10px;
+    }
+
+    .avatar {
+        margin-bottom: 20px;
+    }
+
+    .team-social {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .team-social {
+        text-align: center;
+    }
+
+        .team-social li {
+            display: inline-block;
+            margin: 0 !important;
+            padding: 0;
+        }
+
+
+        .team-social a {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #3bbec0;
+            color: #fff;
+            -webkit-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+        }
+
+            .team-social a i {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+
+        .team-social .social-facebook a {
+            background: #3873ae;
+        }
+
+        .team-social .social-twitter a {
+            background: #62c6f8;
+        }
+
+        .team-social .social-dribble a {
+            background: #d74980;
+        }
+
+        .team-social .social-deviantart a {
+            background: #8da356;
+        }
+
+        .team-social .social-google a {
+            background: #000;
+        }
+
+        .team-social .social-vimeo a {
+            background: #51a6d3;
+        }
+
+        .team-social .social-facebook a:hover {
+            background: #4893ce;
+        }
+
+        .team-social .social-twitter a:hover {
+            background: #82e6ff;
+        }
+
+        .team-social .social-dribble a:hover {
+            background: #f769a0;
+        }
+
+        .team-social .social-deviantart a:hover {
+            background: #adc376;
+        }
+
+        .team-social .social-google a:hover {
+            background: #333;
+        }
+
+        .team-social .social-vimeo a:hover {
+            background: #71c6f3;
+        }
+    .home-section {
+        padding-top: 110px;
+        padding-bottom: 110px;
+        display: block;
+        position: relative;
+        z-index: 120;
+    }
+
+
+
+</style>
+
+
 
         <div class="col-md-8">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-5 text-right">
                     @{
                         string urlpart = HttpContext.Current.Request.Url.AbsoluteUri;
                         urlpart = urlpart.Split('/').Last();
@@ -39,10 +137,12 @@
                     <a id="Student Profile" href="~/Admin/Read/@urlpart" class="btn btn-primary">Student Profile</a>
                     @*@Html.ActionLink("Student Profile", "Read", "Admin",null, new { @class = "btn btn-primary" })*@
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 text-right">
                     @Html.ActionLink("Attendance Information", "Attendance", "Admin", null, new { @class = "btn btn-primary" })
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+

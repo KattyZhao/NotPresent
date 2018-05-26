@@ -1,5 +1,6 @@
 body {
   font-size: 14px;
+
 }
 
 .row {
@@ -52,5 +53,5 @@ h2 {
 }
 
 .fc-today {
-  background-color: #F2F2F2;
+  background-color:  crimson;
 }
