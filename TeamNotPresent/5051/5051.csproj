@@ -332,6 +332,9 @@
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\calendarevent\bootstrap-ie7.css" />
+    <Content Include="Content\css\calendarevent\fullcalendar.css" />
     <Content Include="Content\img\avatar0.png" />
     <Content Include="Content\img\avatar1.png" />
     <Content Include="Content\img\avatar2.png" />
@@ -371,6 +374,10 @@
     <Content Include="Content\img\studentreport.PNG" />
     <Content Include="Content\img\stuLogin.jpg" />
     <Content Include="Content\img\card4bw.png" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\vendor\bootstrap-ie7.css" />
+    <Content Include="Content\vendor\bootstrap.min.css" />
+    <Content Include="Content\vendor\fullcalendar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -392,8 +399,10 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\NotPresent - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -401,6 +410,14 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\calendar.js" />
+    <Content Include="Scripts\js\events.js" />
+    <Content Include="Scripts\js\calendar\bootstrap.min.js" />
+    <Content Include="Scripts\js\calendar\collapse.js" />
+    <Content Include="Scripts\js\calendar\fullcalendar.js" />
+    <Content Include="Scripts\js\calendar\jquery.min.js" />
+    <Content Include="Scripts\js\calendar\moment.min.js" />
+    <Content Include="Scripts\js\calendar\transition.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -463,7 +480,7 @@
     <Content Include="Views\Admin\Print.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Admin\Report.cshtml" />
-    <Content Include="Views\Admin\Calendar.cshtml" />
+    <Content Include="Views\Admin\StudentCalendar.cshtml" />
     <Content Include="Views\Admin\CalendarEvent.cshtml" />
     <Content Include="Views\Admin\CalendarAddEvent.cshtml" />
     <Content Include="Views\Kiosk\checkOutConf.cshtml" />

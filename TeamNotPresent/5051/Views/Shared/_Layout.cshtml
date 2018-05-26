@@ -78,5 +78,19 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    @{
+        string urlpart = HttpContext.Current.Request.Url.AbsoluteUri;
+        urlpart = urlpart.Split('/').Last();
+        if (urlpart == "StudentCalendar")
+        {
+            <script src="/Scripts/js/calendar/moment.min.js"></script>
+            <script src='/Scripts/js/calendar/fullcalendar.js'></script>
+            <script src='/Scripts/js/events.js'></script>
+            <script src="/Scripts/js/calendar.js"></script>
+        }
+
+    }
+
 </body>
 </html>

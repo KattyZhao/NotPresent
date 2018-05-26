@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Calendar";
+}
+
+<h1 style="font-size:large">
+    BePresent
+    </>
+</h1>
+
+
+<style>
+    .sidebar-nav-fixed {
+        width: 14%;
+    }
+</style>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/calendarevent/fullcalendar.css" rel="stylesheet" />
+<link href="~/Content/css/style.css" rel="stylesheet" />
+
+@*<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="~/Scripts/js/calendar/moment.min.js"></script>
+<script src='~/Scripts/js/calendar/bootstrap.min.js'></script>
+<script src='~/Scripts/js/calendar/fullcalendar.js'></script>
+<script src='~/Scripts/js/events.js'></script>
+<script src="~/Scripts/js/calendar.js"></script>*@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="sidebar-nav-fixed affix">
+                <div class="well">
+                    <ul class="nav ">
+                        <li class="nav-header"><a href="~/Admin/StudentHome">Students</a></li>
+                        <li class="nav-header"><a href="~/Admin/Report">Report</a></li>
+                        <li class="nav-header"><a href="~/Admin/StudentCalendar">Calendar</a></li>
+                        <li class="nav-header"><a href="~/Admin/Logout">Logout</a></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <p class="navbar-brand" id="todaysDate"></p>
+            </div>
+        </nav>
+        <div class="container-fluid row">
+            <div id='calendar1' class='calendar col-md-8'></div>
+            <div id='calendar2' class='calendar col-md-4'></div>
+        </div>
+        <div class="modal fade" id="newEvent" role="dialog" aria-labelledby="eventFormLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="newEvent">New Apppointment</h4>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="title" class="form-control-label">Title</label>
+                                <input type="text" class="form-control" id="title">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success" id="submit">Create Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="editEvent" role="dialog" aria-labelledby="eventFormLabel" aria-hidden="true" data-persist="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="editEvent">Update Apppointment</h4>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="title" class="form-control-label">Title</label>
+                                <input type="text" class="form-control" id="editTitle">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger left" id="delete">Delete Event</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success" id="update">Update Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+

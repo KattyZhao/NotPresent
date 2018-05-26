@@ -116,7 +116,7 @@ namespace _5051.Controllers
             return View();
         }
 
-        public ActionResult Calendar()
+        public ActionResult StudentCalendar()
         {
             return View();
         }

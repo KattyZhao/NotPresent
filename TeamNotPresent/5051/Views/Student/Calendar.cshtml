@@ -29,7 +29,7 @@
         font-family: "Inconsolata", sans-serif;
 </style>
 
-
+<link href="~/Content/style.css" rel="stylesheet" />
 <body class="w3-content" style="max-width:1200px">
 
     <!-- Sidebar/menu -->
@@ -67,6 +67,11 @@
 
         <div class="w3-container" id="about">
 
-            <img src="~/Content/img/cal.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+            <div class="col-md-2">
+                <div id="calendar"></div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+                <script src="~/Scripts/index.js"></script>
+            </div>
         </div>
-    </div>
+        </div>
