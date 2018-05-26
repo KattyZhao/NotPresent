@@ -477,6 +477,7 @@
     <Content Include="Views\Home\Game.cshtml" />
     <Content Include="Views\Home\ClassSchedule.cshtml" />
     <Content Include="Views\Home\Checkin.cshtml" />
+    <Content Include="Views\Student\carousel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
