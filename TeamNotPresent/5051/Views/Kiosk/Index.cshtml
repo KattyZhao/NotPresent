@@ -1,12 +1,13 @@
-﻿
-<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
-
-@model _5051.Models.StudentViewModel
+﻿@model _5051.Models.StudentViewModel
 
 @{
     ViewBag.Title = "Index";
 }
 
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li class="active">Kiosk</li>
+</ol>
 <body>
     <br>
     <div class="panel panel-primary">
@@ -40,23 +41,45 @@
                         @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
                     </div>
                     <div class="col-md-4 text-center">
-                        @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Mike", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
                     </div>
                     <div class="col-md-4 text-center">
-                        @Html.ActionLink("Diamond", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Jea", "checkInConf", "Kiosk", null, new { @class = "btn btn-primary" })
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
 
 
+    <br />
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Checked-in friends...</h3>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
 
-    <div class="container">
-        <a href='@Url.Action("checkOutConf", "Kiosk")'>
-            <img src='@Url.Content("~/Content/img/checkOut.jpg")' style="width:100%">
-        </a>
+                    <div class="col-md-4 text-center">
+                        <a href='@Url.Action("checkOutConf", "Kiosk")'>
+                            <img src='@Url.Content("~/Content/img/displayPic.jpg")' alt="display" style="width:120px;height:120px">
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href='@Url.Action("checkOutConf", "Kiosk")'>
+                            <img src='@Url.Content("~/Content/img/displayPic.jpg")' alt="display" style="width:120px;height:120px">
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href='@Url.Action("checkOutConf", "Kiosk")'>
+                            <img src='@Url.Content("~/Content/img/displayPic.jpg")' alt="display" style="width:120px;height:120px">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+ 
 
 </body>
