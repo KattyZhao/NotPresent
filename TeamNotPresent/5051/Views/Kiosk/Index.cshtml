@@ -68,6 +68,7 @@
     </div>
 
     <br />
+   
     <div class="panel panel-success">
         <div class="panel-heading">
             <h3 class="panel-title">Checked-in friends...</h3>
@@ -76,16 +77,67 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-4 text-center">
-                           <img src="~/Content/img/displayPic.jpg" alt="display pic" data-toggle="modal" data-target="#chkOut" style="width:120px;height:120px">
+                    <style>
+                        /*.container {
+                           
+                            width: 30%;
+                        }*/
+
+                        .image {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        .overlay {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            height: 100%;
+                            width: 60%;
+                            opacity: 0;
+                            transition: .5s ease;
+                            background-color: #008CBA;
+                            
+                        }
+
+                        .overlay:hover {
+                            opacity: 1;
+                        }
+
+                        .text {
+                            color: white;
+                            font-size: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            text-align: center;
+                        }
+                    </style>
+
+                    <div class="col-md-3 text-center">
+                        <img src="~/Content/img/displayPic.jpg" alt="display pic" data-toggle="modal" data-target="#chkOut" style="width:120px;height:120px" class="image">
+                        <div class="overlay">
+                            <div class="text">Diamond</div>
+                        </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                           <img src="~/Content/img/displayPic.jpg" alt="display pic" data-toggle="modal" data-target="#chkOut" style="width:120px;height:120px">
+                    <div class="col-md-3 text-center">
+                        <img src="~/Content/img/displayPic.jpg" alt="display pic" data-toggle="modal" data-target="#chkOut" style="width:120px;height:120px" class="image">
+                        <div class="overlay">
+                        <div class="text">Mike</div>
+                      </div>
                     </div>
-                    <div class="col-md-4 text-center">
-                           <img src="~/Content/img/displayPic.jpg" alt="display pic" data-toggle="modal" data-target="#chkOut" style="width:120px;height:120px">
+                    <div class="col-md-3 text-center">
+                        <img src="~/Content/img/displayPic.jpg" alt="display pic" data-toggle="modal" data-target="#chkOut" style="width:120px;height:120px" class="image">
+                        <div class="overlay">
+                        <div class="text">Jea</div>
+                        </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </div>
