@@ -1,4 +1,5 @@
 ﻿@model _5051.Models.StudentHomeViewModel
+
 @{
     ViewBag.Title = "Home";
 }
@@ -6,73 +7,43 @@
 
 <body class="w3-content" style="max-width:1200px">
 
+    <!-- Top header -->
+    <header class="w3-container w3-large">
+        <p class="w3-right">
+            <i class="fa fa-cog w3-margin-right"></i>
+            <a href="~/Student/Nav">DashBoard</a>
+        </p>
+    </header>
 
-    <!-- Sidebar/menu -->
-    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
-        <div class="w3-container w3-display-container w3-padding-16">
-            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-            <h3 class="w3-wide"><b>Menu</b></h3>
-        </div>
-        <div class="w3-padding-64 w3-large w3-text-grey">
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            <a></a>
-            @Html.ActionLink("carousel", "carousel", "student", null, new { @class = "btn btn-primary" })
-            <a href="~/Student/Profile" class="w3-bar-item w3-button">Profile</a>
-            <a href="~/Student/PostCards" class="w3-bar-item w3-button">PostCards</a>
-            <a href="~/Student/Attendance" class="w3-bar-item w3-button">Attendance</a>
-            <a href="~/Student/Calendar" class="w3-bar-item w3-button">Calendar</a>
-            <a href="~/Student/Logout" class="w3-bar-item w3-button">Logout</a>
+    <!-- Top header -->
+    <header class="w3-container w3-xlarge">
+        <p></p>
+        <p class="w3-left">Welcome, @Model.Student.Name</p>
+    </header>
 
-        </div>
-    </nav>
+    <header class=" w3-right w3-median">
+        <p id="demo"></p>
+        <script>
+            var dt = new Date();
+            document.getElementById("demo").innerHTML = dt.toLocaleString();
+            var myVar = setInterval(function () { myTimer() }, 1000);
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+            function myTimer() {
+                var d = new Date();
+                document.getElementById("demo").innerHTML = d.toLocaleString();
+            }
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:250px">
+        </script>
+    </header>
 
-        <!-- Push down content on small screens -->
-        <div class="w3-hide-large" style="margin-top:83px"></div>
+    <!-- reward point -->
+    <header class="w3-container w3-median">
+        <p></p>
+        <p class="w3-right">Reward Point：@Model.Student.Tokens</p>
+    </header>
 
-        <!-- Top header -->
-        <header class="w3-container w3-xlarge">
-            <p></p>
-            <p class="w3-left">Welcome, @Model.Student.Name</p>
-        </header>
-
-        <header class=" w3-right w3-median">
-            <p id="demo"></p>
-            <script>
-                var dt = new Date();
-                document.getElementById("demo").innerHTML = dt.toLocaleString();
-                var myVar = setInterval(function () { myTimer() }, 1000);
-
-                function myTimer() {
-                    var d = new Date();
-                    document.getElementById("demo").innerHTML = d.toLocaleString();
-                }
-
-            </script>
-        </header>
-
-        <!-- reward point -->
-        <header class="w3-container w3-median">
-            <p></p>
-            <p class="w3-right">Reward Point：@Model.Student.Tokens</p>
-        </header>
-
-        <!-- button -->
-        <button class=" w3-right" onclick="myFunction()">Claim</button>
+    <!-- button -->
+    @*<button class=" w3-right" onclick="myFunction()">Claim</button>
         <p id="demo"></p>
 
         <script>
@@ -85,18 +56,16 @@
                 }
                 document.getElementById("demo").innerHTML = txt;
             }
-        </script>
+        </script>*@
 
-        <!-- earth -->
-        <header>
-            <script src="http://www.webglearth.com/v2/api.js"></script>
-            <script>
+    <!-- earth -->
+    <header>
+        <script src="http://www.webglearth.com/v2/api.js"></script>
+        <script>
                 function initialize() {
                     var earth = new WE.map('earth_div');
                     WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
-
-
-                @{
+                   @{
                     var count = 1;
                     var DblQuote = Convert.ToChar(34);
                     foreach (var pin in Model.MapPinLocationsList)
@@ -122,7 +91,7 @@
                 }
 
 
-                earth.setView([51.505, 0], 4);
+                earth.setView([51.505, 0], 2);
 
 
                 // Start a simple rotation animation
@@ -137,74 +106,59 @@
 
 
                             }
-            </script>
-
-        </header>
-
-        <body onload="initialize()">
-            <div id="earth_div"></div>
-        </body>
-
-        @{
-            // If no points, then don't show the buy button
-            if (Model.Student.Tokens > 0)
-            {
-                using (Html.BeginForm("BuyPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                {
-                    @Html.AntiForgeryToken()
-                    @Html.Hidden("StudentId", Model.Student.Id)
-
-                    <input type="submit" value="Play" class="btn btn-primary">
-                }
-
-            }
-        }
-        <!-- Play button -->
-        @*<button class=" w3-center" onclick="Play()">Play</button>*@
-        <script>
-            function Play() {
-
-
-                var markerCustom = WE.marker([39.9, 116.3]).addTo(earth);
-                markerCustom.bindPopup("<b>Beijing</b><br>You are currently here", { maxWidth: 120, closeButton: true });
-
-            }
         </script>
 
+    </header>
 
-        <div>
-            Cities Owned<br />
-            @{
-                count = 0;
-                foreach (var pin in Model.MapPinLocationsList)
-                {
-                    if (count < Model.Student.Cities)
-                    {
-                        @pin.Heading<br />
-                        count++;
-                    }
-                }
+    <body onload="initialize()">
+        <div id="earth_div"></div>
+    </body>
+
+    @{
+        // If no points, then don't show the buy button
+        if (Model.Student.Tokens > 0)
+        {
+            using (Html.BeginForm("BuyPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.Hidden("StudentId", Model.Student.Id)
+
+                <input type="submit" value="Play" class="btn btn-primary">
             }
-        </div>
-        <br />
-        <br />
 
-        <div>
-            Cities To Buy<br />
-            @{
-                count = 0;
-                foreach (var pin in Model.MapPinLocationsList)
+        }
+    }
+
+
+
+    <div class="w3-col m3">
+
+        @{
+            count = 0;
+
+            foreach (var pin in Model.MapPinLocationsList)
+            {
+                if (count < Model.Student.Cities)
                 {
-                    if (count > Model.Student.Cities)
-                    {
-                        @pin.Heading<br />
-                    }
+                    var line3 = DblQuote + "<div style = '' >" + "'<img src='" + pin.Uri + "' height=100 width=auto/ class='w3 - hover - opacity'></div>" + DblQuote;
+
+
+                    @pin.Heading<br />
                     count++;
+
+                    @Html.Raw(line3);
+                }
+                else
+                {
+                    var line = DblQuote + "<div style = ''>" + "'<img src= 'https://www.blurbusters.com/wp-content/uploads/2013/06/lock.png'  height=100 width=auto/></div>" + DblQuote;
+                    @Html.Raw(line);
                 }
             }
-        </div>
 
-    </div>
+        }
+    </div>/
+    <br />
+    <br />
 
 
 </body>

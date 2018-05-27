@@ -17,6 +17,9 @@ namespace _5051.Controllers
         // The Backend Data source
         private StudentBackend StudentBackend = StudentBackend.Instance;
 
+        private StudentHomeViewModel myData = new StudentHomeViewModel();
+
+
         // GET: Student
         /// <summary>
         /// Index, the page that shows all the Students
@@ -36,8 +39,6 @@ namespace _5051.Controllers
 
         public ActionResult Home(string id = null)
         {
-            var myData = new StudentHomeViewModel();
-
             // Get Student passed in, if no student then default a student.
             var myStudent = StudentBackend.Instance.Read(id);
             if (myStudent != null)
@@ -61,6 +62,15 @@ namespace _5051.Controllers
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 51.5079, Longitude = -0.08772649, Heading = "London", Body = "Cool Bridge", color = "grey", Uri = "https://www.bing.com/th?id=OIP.Ll-ZME-_Anx_Y1J-qAY25AHaHa&pid=Api" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 47.61032, Longitude = -122.3206, Heading = "Seattle", Body = "SU", color = "grey", Uri = "https://www.bing.com/th?id=OIP.v2hpn5UE09t0gml2QWbAtAHaIb&pid=Api" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "Beijing", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "5", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "6", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "7", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "8", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "9", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "10", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
+
+
+
 
             // Mike:  Need to change the color of the map locaitons based on the cityCount, so for 1 to CityCount, the colore is Green, and from CityCount - Total count the color is grey
 
@@ -103,13 +113,13 @@ namespace _5051.Controllers
                         return RedirectToAction("Error", new { route = "Home", action = "Error" });
                     }
 
-                    //if (string.IsNullOrEmpty(data.StudentId))
-                    //{
-                    //    return RedirectToAction("Error", new { route = "Home", action = "Error" });
-                    //}
+                        //if (string.IsNullOrEmpty(data.StudentId))
+                        //{
+                        //    return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                        //}
 
 
-                    var myStudent = StudentBackend.Instance.Read(data.StudentId);
+                        var myStudent = StudentBackend.Instance.Read(data.StudentId);
                     if (myStudent == null)
                     {
                         return RedirectToAction("Error", new { route = "Home", action = "Error" });
@@ -139,6 +149,10 @@ namespace _5051.Controllers
             }
         }
 
+        public ActionResult Nav()
+        {
+            return View();
+        }
 
         public ActionResult Profile()
         {
