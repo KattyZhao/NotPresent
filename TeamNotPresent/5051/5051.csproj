@@ -368,6 +368,7 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\calendar-20clip-20art-july_calendar_712.jpg" />
     <Content Include="Content\img\card5.png" />
     <Content Include="Content\img\cal.png" />
     <Content Include="Content\img\cal1.png" />
@@ -382,10 +383,14 @@
     <Content Include="Content\img\displayPic.jpg" />
     <Content Include="Content\img\earth.jpg" />
     <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\flat-illustration-of-interior-school-classroom-student-desks-clipart.jpg" />
+    <Content Include="Content\img\fun-watch-character-holding-a-school-pencil-clipart-6565.jpg" />
     <Content Include="Content\img\graphStudent.jpg" />
     <Content Include="Content\img\graphTeacher.jpg" />
     <Content Include="Content\img\card2.png" />
     <Content Include="Content\img\card3bw.png" />
+    <Content Include="Content\img\hand-with-pencil-stars-checkmark-clipart.jpg" />
+    <Content Include="Content\img\multicultural-children-around-the-globe-clipart-622.jpg" />
     <Content Include="Content\img\Postcard.jpg" />
     <Content Include="Content\img\card1.png" />
     <Content Include="Content\img\stuCheckIn.jpg" />
@@ -393,6 +398,7 @@
     <Content Include="Content\img\rep.png" />
     <Content Include="Content\img\rep1.png" />
     <Content Include="Content\img\Student Save Page_Admin.jpg" />
+    <Content Include="Content\img\student-character-holding-big-pencil-clipart.jpg" />
     <Content Include="Content\img\Student.jpg" />
     <Content Include="Content\img\Student.PNG" />
     <Content Include="Content\img\studentreport.PNG" />
