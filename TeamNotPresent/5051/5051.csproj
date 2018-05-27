@@ -377,7 +377,7 @@
     <Content Include="Content\img\calendar.jpg" />
     <Content Include="Content\img\Capture.JPG" />
     <Content Include="Content\img\checkIn.jpg" />
-    <Content Include="Content\img\checkOut.jpg" />
+    <Content Include="Content\img\chkOutConf.jpg" />
     <Content Include="Content\img\Conf_checkIN.jpg" />
     <Content Include="Content\img\Conf_checkOUT.jpg" />
     <Content Include="Content\img\displayPic.jpg" />
