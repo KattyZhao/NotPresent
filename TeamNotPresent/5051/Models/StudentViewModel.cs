@@ -51,4 +51,5 @@ namespace _5051.Models
             MapPinLocationsList = new List<MapPinLocationModel>();
         }
     }
+
 }
