@@ -6058,6 +6058,10 @@ body.modal-open,
   left: 0;
 }
 
+.carousel-inner > .item > img {
+        margin: auto;
+}
+
 .carousel-inner > .active.left {
   left: -100%;
 }
