@@ -58,14 +58,15 @@ namespace _5051.Controllers
             // Change this in the future, add a new viewmodel, that combines the pin information with the student information for the home index
 
             // Katty  Add more example cities, about 10
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 30.058056, Longitude = 31.228889, Heading = "Egypt", Body = "Pyramids", color = "grey", Uri = "https://www.bing.com/th?id=OIP.Ll-ZME-_Anx_Y1J-qAY25AHaHa&pid=Api" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 30.058056, Longitude = 31.228889, Heading = "Egypt", Body = "Pyramids", color = "grey", Uri = "/Content/img/card1.png"});
+            
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 40.730610, Longitude = -73.935242, Heading = "New York", Body = "Brooklyn Bridge", color = "grey", Uri = "/Content/img/card5.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 21.7679, Longitude = 78.8718, Heading = "India", Body = "Agra", color = "grey", Uri = "/Content/img/card3bw.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 35.652832, Longitude = 139.839478, Heading = "Japan", Body = "Mt.Fuji", color = "grey", Uri = "/Content/img/card2.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = -33.865143, Longitude = 151.209900, Heading = "Australia", Body = "Sydney", color = "grey", Uri = "/Content/img/card4bw.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 51.5079, Longitude = -0.08772649, Heading = "London", Body = "Cool Bridge", color = "grey", Uri = "https://www.bing.com/th?id=OIP.Ll-ZME-_Anx_Y1J-qAY25AHaHa&pid=Api" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 47.61032, Longitude = -122.3206, Heading = "Seattle", Body = "SU", color = "grey", Uri = "https://www.bing.com/th?id=OIP.v2hpn5UE09t0gml2QWbAtAHaIb&pid=Api" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "Beijing", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "5", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "6", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "7", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "8", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "9", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.913818, Longitude = 116.363625, Heading = "10", Body = "the forbidden city", color = "grey", Uri = "https://image.flaticon.com/icons/png/128/198/198912.png" });
 

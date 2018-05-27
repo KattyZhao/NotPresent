@@ -382,6 +382,7 @@
     <Content Include="Content\img\Conf_checkOUT.jpg" />
     <Content Include="Content\img\displayPic.jpg" />
     <Content Include="Content\img\earth.jpg" />
+    <Content Include="Content\img\earthColor.jpg" />
     <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\flat-illustration-of-interior-school-classroom-student-desks-clipart.jpg" />
     <Content Include="Content\img\fun-watch-character-holding-a-school-pencil-clipart-6565.jpg" />
@@ -539,7 +540,8 @@
     <Content Include="Views\Home\Game.cshtml" />
     <Content Include="Views\Home\ClassSchedule.cshtml" />
     <Content Include="Views\Home\Checkin.cshtml" />
-    <Content Include="Views\Student\carousel.cshtml" />
+    <Content Include="Views\Student\Nav.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
