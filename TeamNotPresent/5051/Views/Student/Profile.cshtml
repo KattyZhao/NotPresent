@@ -1,59 +1,99 @@
 ﻿@{
     ViewBag.Title = "Profile";
 }
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Student</a></li>
+    <li class="active">Profile</li>
+</ol>
+<body>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <br>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"></h3>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="thumbnail">
+                            <img src="~/Content/img/profilePic.png" alt="display pic" style="width:150px;height:150px" />
+                            <div class="caption">
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chgProPic">Change Profile Picture</button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="chgProPic" role="dialog">
+                                <div class="modal-dialog">
 
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <label>Upload File</label>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                    <input type="file">
+                                                <p class="help-block">Only png and jpg allowed</p>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    }
-
-    body, h1, h2, h3, h4, h5, h6, .w3-wide {
-        font-family: "Inconsolata", sans-serif;
-</style>
-
-
-<body class="w3-content" style="max-width:1200px">
-
-    
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left:250px">
-
-        <!-- Top header -->
-        <header class="w3-container w3-large">
-            <p class="w3-right">
-                <i class="fa fa-cog w3-margin-right"></i>
-                <a href="~/Student/Nav">DashBoard</a>
-            </p>
-        </header>
-
-        <div class="w3-container" id="about">
-            <div class="w3-content" style="max-width:700px">
-                <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Student Profile</span></h5>
-                <img src="~/Content/img/Student.jpg" style="width:100%;max-width:500px" class="w3-margin-top">
-                <p class="w3-center" font-size : xxx-large>Diamond</p>
-
-                <div class="w3-padding-64 w3-large w3-text-grey">
-                    <a href="#" class="w3-bar-item w3-button">Edit</a>
-                    <a href="~/Student/Nav" class="w3-bar-item w3-button">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <span class="label label-default">Name</span>
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <font size="3">Diamond</font>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">Mobile</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">206-999-9999</font>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">Guardian Name</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">John Doe</font>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">Guardian Mobile</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">206-999-9999</font>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">Address</span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">344 56th Ave, Marshall Road, Seattle, WA-98065</font>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+    </div>
+</div>
 
 
 
-
-
+</body>
