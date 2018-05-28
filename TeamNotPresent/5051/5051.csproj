@@ -358,6 +358,8 @@
     <Content Include="Content\daterangepicker\daterangepicker.js" />
     <Content Include="Content\daterangepicker\moment.js" />
     <Content Include="Content\daterangepicker\moment.min.js" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\img\avatar0.png" />
     <Content Include="Content\img\avatar1.png" />
     <Content Include="Content\img\avatar2.png" />
@@ -368,6 +370,7 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\boy-going-to-school-walking-and-waving-back-to-school-clipart-6726.jpg" />
     <Content Include="Content\img\calendar-20clip-20art-july_calendar_712.jpg" />
     <Content Include="Content\img\card5.png" />
     <Content Include="Content\img\cal.png" />
@@ -410,6 +413,9 @@
     <Content Include="Content\jquery\jquery-3.2.1.min.js" />
     <Content Include="Content\logincss\main.css" />
     <Content Include="Content\logincss\util.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\material-design-iconic-font.css" />
+    <Content Include="Content\material-design-iconic-font.min.css" />
     <Content Include="Content\perfect-scrollbar\perfect-scrollbar.css" />
     <Content Include="Content\perfect-scrollbar\perfect-scrollbar.min.js" />
     <Content Include="Content\select2\select2.css" />
@@ -417,6 +423,7 @@
     <Content Include="Content\select2\select2.min.css" />
     <Content Include="Content\select2\select2.min.js" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\util.css" />
     <Content Include="Content\vendor\bootstrap-ie7.css" />
     <Content Include="Content\vendor\bootstrap.min.css" />
     <Content Include="Content\vendor\fullcalendar.css" />
