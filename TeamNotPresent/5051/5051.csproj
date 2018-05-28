@@ -360,6 +360,7 @@
     <Content Include="Content\daterangepicker\moment.min.js" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\img\african-american-maile-student-in-unifrom-with-backpack-clipart.jpg" />
     <Content Include="Content\img\avatar0.png" />
     <Content Include="Content\img\avatar1.png" />
     <Content Include="Content\img\avatar2.png" />
@@ -370,7 +371,11 @@
     <Content Include="Content\img\avatar7.png" />
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
+    <Content Include="Content\img\bg-masthead.jpg" />
     <Content Include="Content\img\boy-going-to-school-walking-and-waving-back-to-school-clipart-6726.jpg" />
+    <Content Include="Content\img\boy-student-with-bagpack-happily-jump-in-the-air-back-to-school-clipart.jpg" />
+    <Content Include="Content\img\boy-student-with-his-bag-pack-and-book-back-to-school-clipart.jpg" />
+    <Content Include="Content\img\boy-wearing-glasses-reading-book-back-to-school-clipart.jpg" />
     <Content Include="Content\img\calendar-20clip-20art-july_calendar_712.jpg" />
     <Content Include="Content\img\card5.png" />
     <Content Include="Content\img\cal.png" />
@@ -389,6 +394,8 @@
     <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\flat-illustration-of-interior-school-classroom-student-desks-clipart.jpg" />
     <Content Include="Content\img\fun-watch-character-holding-a-school-pencil-clipart-6565.jpg" />
+    <Content Include="Content\img\girl-showing-back-to-school-happily-clipart-2.jpg" />
+    <Content Include="Content\img\girl-student-back-to-school-clipart-2.jpg" />
     <Content Include="Content\img\graphStudent.jpg" />
     <Content Include="Content\img\graphTeacher.jpg" />
     <Content Include="Content\img\card2.png" />
@@ -398,6 +405,7 @@
     <Content Include="Content\img\Postcard.jpg" />
     <Content Include="Content\img\card1.png" />
     <Content Include="Content\img\profilePic.png" />
+    <Content Include="Content\img\smiling-cute-girl-with-her-bag-pack-back-to-school-clipart.jpg" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="Content\img\prof.png" />
     <Content Include="Content\img\rep.png" />
