@@ -22,9 +22,9 @@
             {
                 foreach (var item in Model.StudentList)
                 {
-                    <a id="@item.Id" href="~/Admin/Home/@item.Id">
-                        <div class="col-sm-2">
-                            <img src="~/Content/img/@item.Uri" width="100" height="100" />
+                    <a id="@item.Id" href="~/Admin/Read/@item.Id">
+                        <div class="col-sm-3">
+                            <img src="~/Content/img/@item.Uri" width="90" height="150" />
                             <br />
                             <span>
                                 @item.Name
