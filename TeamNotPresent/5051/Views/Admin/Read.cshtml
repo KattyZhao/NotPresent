@@ -3,135 +3,94 @@
     ViewBag.Title = "Read";
 }
 
-<header class="w3-container w3-large">
-    <p class="w3-margin-right" style="font-size:large">
-        <i class="fa fa-cog w3-margin-right"></i>
-        <a href="~/Admin/MainHome"> Home </a>
-    </p>
-
-</header>
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Admin</a></li>
+    <li class="active">Student Profile</li>
+</ol>
 
 
-<style>
-    .sidebar-nav-fixed {
-        width: 14%;
-    }
 
+    @{
+        if (Model == null)
+        {
+            <p>No Student</p>
+        }
 
-   
-
-
-</style>
-
-
-@{
-    if (Model == null)
-    {
-        <p>No Student</p>
-    }
-
-    else
-    {
-        <div class="row">
-
-            <br />
-            <br />
-
-            <div class="row">
-                <div class="col-sm-4 ">
+        else
+        {
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"></h3>
                 </div>
-                <div class="col-sm-3">
-                    <img src="~/Content/img/@Model.Uri" width="150" height="150" />
-
-                    <br />
-                    @*<span>
-
-                        <strong> @Model.Name </strong>*@
-                    <br />
-                    <br />
-                    <br />
-                    @*</span>*@
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-5 text-right">
-                    <strong>
-                        @Html.DisplayNameFor(m => m.Name)
-                    </strong>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(m => m.Name)
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-sm-5 text-right">
-                    <strong>
-                        @Html.DisplayNameFor(m => m.PowerId)
-                    </strong>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(m => m.PowerId)
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-5 text-right">
-                    <strong>
-                        @Html.DisplayNameFor(m => m.PersonalContact)
-                    </strong>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(m => m.PersonalContact)
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-5 text-right">
-                    <strong>
-
-                        @Html.DisplayNameFor(m => m.GuardianContact)
-                    </strong>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(m => m.GuardianContact)
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-5 text-right">
-                    <strong>
-                        @Html.DisplayNameFor(m => m.Address)
-                    </strong>
-                </div>
-                <div class="col-sm-4">
-                    @Html.DisplayFor(m => m.Address)
-                </div>
-            </div>
-
-
-            <br />
-            <br />
-
-            <div class="col-md-8">
-                @*<img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />*@
-                <div class="row">
-                    <div class="col-md-4 text-right">
-                        @Html.ActionLink("Edit", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
-                    </div>
-                    <div class="col-md-4 text-right">
-                        @Html.ActionLink("Print", "Print", "Admin", null, new { @class = "btn btn-primary" })
-                    </div>
-                    <div class="col-md-4 text-right">
-                        @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="thumbnail">
+                                    <img src="~/Content/img/@Model.Uri" width="150" height="150" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <span class="label label-default">
+                                    @Html.DisplayNameFor(m => m.Name)
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <font size="3">@Html.DisplayFor(m => m.Name)</font>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <span class="label label-default">
+                                    @Html.DisplayNameFor(m => m.PersonalContact)
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <font size="3">@Html.DisplayFor(m => m.PersonalContact)</font>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <span class="label label-default">
+                                    @Html.DisplayNameFor(m => m.GuardianContact)
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <font size="3">@Html.DisplayFor(m => m.GuardianContact)</font>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 text-right">
+                                <span class="label label-default">
+                                    @Html.DisplayNameFor(m => m.Address)
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-left">
+                                <font size="3">@Html.DisplayFor(m => m.Address)</font>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <br />
+                            <div class="col-md-4 text-center">
+                                @Html.ActionLink("Edit", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
+                            </div>
+                            <div class="col-md-4 text-center">
+                                @Html.ActionLink("Print", "Print", "Admin", null, new { @class = "btn btn-primary" })
+                            </div>
+                            <div class="col-md-4 text-center">
+                                @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+               
+        }
+
     }
 
-}
 
-    </div>
 
