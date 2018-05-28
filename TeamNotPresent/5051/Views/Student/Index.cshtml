@@ -4,36 +4,98 @@
 @{
     ViewBag.Title = "Index";
 }
-<h1 style="font-size:large">BePresent</h1>
 
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
+          
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="~/Content/img/boy-going-to-school-walking-and-waving-back-to-school-clipart-6726.jpg" />
 
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+<!--===============================================================================================-->
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+
+<link href="~/Content/material-design-iconic-font.min.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+<link href="~/Content/bootstrap/animate/animate.css" rel="stylesheet" type="text/css" />
+
+<!--===============================================================================================-->
+
+<link href="~/Content/css-hamburgers/hamburgers.min.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+
+<link href="~/Content/animsition/css/animsition.min.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+
+<link href="~/Content/select2/select2.min.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+
+<link href="~/Content/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+<!--===============================================================================================-->
+
+<link href="~/Content/util.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/main.css" rel="stylesheet" type="text/css" />
+
+<!--===============================================================================================-->
+
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form">
+                <span class="login100-form-title p-b-26">
+                    Welcome
+                </span>
+             
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="email">
+                    <span class="focus-input100" data-placeholder="Email"></span>
+                </div>
+
+                <div class="wrap-input100">
+                    <span class="btn-show-pass">
+                        <i class="zmdi zmdi-eye"></i>
+                    </span>
+                    <input class="input100" type="password" name="pass">
+                    <span class="focus-input100" data-placeholder="Password"></span>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <a class="login100-form-btn" href="~/Student/Nav">
+                            Login
+                        </a>
                     </div>
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-            }
-        </section>
+
+
+
+            </form>
+        </div>
     </div>
 </div>
-<div align="center">
-    @Html.ActionLink("Login", "Nav", "Student", null, new { @class = "btn btn-primary" })
-</div>
 
+
+<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+
+<script src="~/Content/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+
+<script src="~/Content/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Content/bootstrap/js/popper.js"></script>
+<script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Content/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+
+<script src="~/Content/daterangepicker/daterangepicker.js"></script>
+<script src="~/Content/daterangepicker/moment.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/Content/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="~/Scripts/main.js"></script>
