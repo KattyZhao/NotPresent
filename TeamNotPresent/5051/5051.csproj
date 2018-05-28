@@ -472,6 +472,7 @@
     <Content Include="Content\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Content\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Properties\PublishProfiles\bPresent1 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\NotPresent - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\index.js" />
