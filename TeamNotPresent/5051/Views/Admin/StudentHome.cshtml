@@ -2,51 +2,55 @@
 @{
     ViewBag.Title = "StudentHome";
 }
-<h1 style="font-size:large">BePresent</h1>
-<h2 style="font-size:medium">StudentHome</h2>
 
+<header class="w3-container w3-large">
+    <p class="w3-margin-right" style="font-size:large">
+        <i class="fa fa-cog w3-margin-right"></i>
+        <a href="~/Admin/MainHome"> Home </a>
+    </p>
 
+    </header>
 
+    <div class="container">
+        <div class="row">
 
-<div class="container">
-    <div class="row">
-
-        @{
-            if (Model.StudentList == null || !Model.StudentList.Any())
-            {
-                <br />
-                <p>No Students in the System</p>
-                <br />
-            }
-            else
-            {
-                foreach (var item in Model.StudentList)
+            @{
+                if (Model.StudentList == null || !Model.StudentList.Any())
                 {
-                    <a id="@item.Id" href="~/Admin/Read/@item.Id">
-                        <div class="col-sm-3">
-                            <img src="~/Content/img/@item.Uri" width="90" height="150" />
-                            <br />
-                            <span>
-                                @item.Name
-                            </span>
-                        </div>
+                    <br />
+                    <p>No Students in the System</p>
+                    <br />
+                }
+                else
+                {
+                    foreach (var item in Model.StudentList)
+                    {
+                        <a id="@item.Id" href="~/Admin/Read/@item.Id">
+                            <div class="col-sm-3">
+                                <img src="~/Content/img/@item.Uri" width="90" height="150" />
+                                <br />
+                                <span>
+                                    @item.Name
+                                </span>
+                            </div>
 
-                    </a>
+                        </a>
+                    }
                 }
             }
-        }
 
-    </div>
-    <br />
-    <br />
-    <div class="row">
-        <div class="col-sm-2">
-            @Html.ActionLink("Add", "Create", null, new { @class = "btn btn-success" })
         </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-2">
+                @Html.ActionLink("Add", "Create", null, new { @class = "btn btn-success" })
+            </div>
+        </div>
+
+
+
+
     </div>
 
-
-
-
-</div>
-
+    </div>

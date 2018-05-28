@@ -8,7 +8,7 @@ namespace _5051.Backend
 {
 
     /// <summary>
-    /// Datasource Interface for Avatars
+    /// Datasource Interface for Students
     /// </summary>
     public interface IAdminInterface
     {

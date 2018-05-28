@@ -60,10 +60,10 @@ namespace _5051.Backend
         }
 
         /// <summary>
-        /// Makes a new Avatar
+        /// Makes a new Student
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Avatar Passed In</returns>
+        /// <returns>Student Passed In</returns>
         public AdminProfileModel Create(AdminProfileModel data)
         {
             DataSource.Create(data);
@@ -122,7 +122,7 @@ namespace _5051.Backend
         /// <summary>
         /// Return the full dataset
         /// </summary>
-        /// <returns>List of Avatars</returns>
+        /// <returns>List of Students</returns>
         public List<AdminProfileModel> StudentHome()
         {
             var myData = DataSource.StudentHome();
@@ -130,9 +130,9 @@ namespace _5051.Backend
         }
 
         /// <summary>
-        /// Helper that returns the First Avatar ID in the list, this will be used for creating new avatars if no avatarID is specified
+        /// Helper that returns the First Student ID in the list, this will be used for creating new Students if no StudentID is specified
         /// </summary>
-        /// <returns>Null, or Avatar ID of the first avatar in the list.</returns>
+        /// <returns>Null, or Student ID of the first avatar in the list.</returns>
         public string GetFirstStudentId()
         {
             string myReturn = null;
@@ -147,10 +147,10 @@ namespace _5051.Backend
         }
 
         /// <summary>
-        /// Helper function that returns the Avatar Image URI
+        /// Helper function that returns the Student Image URI
         /// </summary>
         /// <param name="data">The avatarId to look up</param>
-        /// <returns>null, or the avatar image URI</returns>
+        /// <returns>null, or the Student image URI</returns>
         public string GetStudentUri(string data)
         {
             if (string.IsNullOrEmpty(data))

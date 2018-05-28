@@ -3,132 +3,147 @@
 @{
     ViewBag.Title = "Index";
 }
+<style>
+    .bg {
+        /* The image used */
+        background-color: gray;
+        /* Full height */
+        height: 70%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div class="bg">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">Kiosk</li>
+    </ol>
+    <body>
+        <br>
 
-<ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li class="active">Kiosk</li>
-</ol>
-<body>
-    <br>
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h3 class="panel-title">Welcome friends! Please check in...</h3>
-        </div>
-        <div class="panel-body">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Welcome friends! Please check in...</h3>
+            </div>
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img class="img-rounded" src="~/Content/img/girl-student-back-to-school-clipart-2.jpg" alt="display pic" style="width:100px;height:150px" />
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img class="img-rounded" src="~/Content/img/boy-student-with-bagpack-happily-jump-in-the-air-back-to-school-clipart.jpg" alt="display pic" style="width:100px;height:150px" />
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img class="img-rounded" src="~/Content/img/boy-student-with-his-bag-pack-and-book-back-to-school-clipart.jpg" alt="display pic" style="width:100px;height:150px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <img class="img-rounded" src="~/Content/img/girl-student-back-to-school-clipart-2.jpg" alt="display pic" style="width:150px;height:150px" />
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img class="img-rounded" src="~/Content/img/boy-student-with-bagpack-happily-jump-in-the-air-back-to-school-clipart.jpg" alt="display pic" style="width:150px;height:150px" />
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img class="img-rounded" src="~/Content/img/boy-student-with-his-bag-pack-and-book-back-to-school-clipart.jpg" alt="display pic" style="width:150px;height:150px" />
-                    </div>
+                <!-- Trigger the modal with a button -->
+                <div class="col-md-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Diamond</button>
                 </div>
-            </div>
-        </div>
-
-
-        <div class="container">
-            <!-- Trigger the modal with a button -->
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Diamond</button>
-            </div>
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Mike</button>
-            </div>
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Jea</button>
-            </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                        </div>
-                        <div class="modal-body">
-                            <p>Check In Success</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
+                <div class="col-md-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Mike</button>
                 </div>
-            </div>
-
-        </div>
-    </div>
-
-    <br />
-
-    <div class="panel panel-success">
-        <div class="panel-heading">
-            <h3 class="panel-title">Checked-in friends...</h3>
-        </div>
-        <div class="panel-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <img class="img-rounded" src="~/Content/img/girl-student-back-to-school-clipart-2.jpg" alt="display pic" style="width:150px;height:150px" />
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img class="img-rounded" src="~/Content/img/boy-wearing-glasses-reading-book-back-to-school-clipart.jpg" alt="display pic" style="width:150px;height:150px" />
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <img class="img-rounded" src="~/Content/img/smiling-cute-girl-with-her-bag-pack-back-to-school-clipart.jpg" alt="display pic" style="width:150px;height:150px" />
-                    </div>
+                <div class="col-md-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Jea</button>
                 </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <!-- Trigger the modal with a button -->
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chkOut">Hannah</button>
-            </div>
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chkOut">Mike</button>
-            </div>
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chkOut">Jack</button>
-            </div>
-        </div>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
 
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="chkOut" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">If you stay you can continue earning points...</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="text-center">
-                                    <img src="~/Content/img/chkOutConf.jpg" alt="chec-out conf" style="width:170px;height:110px">
-                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <p>Check In Success</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Check out, anyway</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Checked-in friends...</h3>
+            </div>
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img class="img-rounded" src="~/Content/img/girl-student-back-to-school-clipart-2.jpg" alt="display pic" style="width:100px;height:150px" />
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img class="img-rounded" src="~/Content/img/boy-wearing-glasses-reading-book-back-to-school-clipart.jpg" alt="display pic" style="width:100px;height:150px" />
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img class="img-rounded" src="~/Content/img/smiling-cute-girl-with-her-bag-pack-back-to-school-clipart.jpg" alt="display pic" style="width:100px;height:150px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <!-- Trigger the modal with a button -->
+                <div class="col-md-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chkOut">Hannah</button>
+                </div>
+                <div class="col-md-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chkOut">Mike</button>
+                </div>
+                <div class="col-md-4 text-center">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#chkOut">Jack</button>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="chkOut" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">If you stay you can continue earning points...</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="text-center">
+                                        <img src="~/Content/img/chkOutConf.jpg" alt="chec-out conf" style="width:170px;height:110px">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Check out, anyway</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</body>
+
+    </body>
+</div>

@@ -10,15 +10,15 @@ namespace _5051.Controllers
 {
     public class AdminController : Controller
     {
-        // A ViewModel used for the Avatar that contains the AvatarList
+        // A ViewModel used for the Avatar that contains the StudentList
         private AdminProfileViewModel AdminProfileViewModel = new AdminProfileViewModel();
 
         // The Backend Data source
         private AdminBackend AdminBackend = AdminBackend.Instance;
 
-        // GET: Avatar
+        // GET: Student
         /// <summary>
-        /// Index, the page that shows all the avatars
+        /// Index, the page that shows all the Students
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
@@ -27,17 +27,17 @@ namespace _5051.Controllers
         }
         public ActionResult StudentHome()
         {
-            // Load the list of data into the AvatarList
+            // Load the list of data into the StudentList
             AdminProfileViewModel.StudentList = AdminBackend.StudentHome();
             return View(AdminProfileViewModel);
         }
 
         /// <summary>
-        /// Read information on a single avatar
+        /// Read information on a single Student
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        // GET: Avatar/Details/5
+        // GET: Student/Details/5
         public ActionResult Read(string id = null)
         {
             var myData = AdminBackend.Read(id);
@@ -45,10 +45,10 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// This opens up the make a new Avatar screen
+        /// This opens up the make a new Student screen
         /// </summary>
         /// <returns></returns>
-        // GET: Avatar/Create
+        // GET: Student/Create
 
         public ActionResult Home()
         {
@@ -64,7 +64,7 @@ namespace _5051.Controllers
             return View();
         }
 
-        // GET: Avatar/Create
+        // GET: Student/Create
         public ActionResult Create()
         {
             var myData = new AdminProfileModel();
@@ -72,11 +72,11 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// Make a new avatar sent in by the create avatar screen
+        /// Make a new Student sent in by the create Studentscreen
         /// </summary>
         /// <param name="collection"></param>
         /// <returns></returns>
-        // POST: Avatar/Create
+        // POST: Student/Create
         [HttpPost]
         public ActionResult Create([Bind(Include=
                                         "Id,"+
@@ -140,11 +140,11 @@ namespace _5051.Controllers
             return View(myData);
         }
         /// <summary>
-        /// This updates the avatar based on the information posted from the udpate page
+        /// This updates the Student based on the information posted from the udpate page
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        // POST: Avatar/Update/5
+        // POST: Student/Update/5
         [HttpPost]
         public ActionResult Update([Bind(Include=  "Id," +
                                                    "Uri," +
@@ -190,11 +190,11 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// This deletes the avatar sent up as a post from the avatar delete page
+        /// This deletes the Student sent up as a post from the Student delete page
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        // POST: Avatar/Delete/5
+        // POST:Student/Delete/5
         [HttpPost]
         public ActionResult Delete([Bind(Include = 
                                            "Id," +

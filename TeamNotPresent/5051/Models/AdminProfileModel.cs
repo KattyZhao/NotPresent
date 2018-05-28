@@ -49,7 +49,7 @@ namespace _5051.Models
         }
 
         /// <summary>
-        /// New Avatar
+        /// New Student
         /// </summary>
         public AdminProfileModel()
         {
@@ -57,11 +57,14 @@ namespace _5051.Models
         }
 
         /// <summary>
-        /// Make an Avatar from values passed in
+        /// Make an Student from values passed in
         /// </summary>
         /// <param name="uri">The Picture path</param>
-        /// <param name="name">Avatar Name</param>
-        /// <param name="description">Avatar Description</param>
+        /// <param name="name">Student Name</param>
+        /// <param name="powerid">Student previous sytem id</param>
+        ///  <param name="personalcontact">Students's contact</param>
+        ///   <param name="guardiancontact">Parent or guardian's contact</param>
+        ///    <param name="address">Student's Home address</param>
         public AdminProfileModel(string uri, string name, string powerid, string personalcontact, string guardiancontact, string address)
         {
             Initialize();

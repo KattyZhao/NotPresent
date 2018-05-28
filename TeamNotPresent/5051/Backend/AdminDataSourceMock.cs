@@ -7,7 +7,7 @@ using _5051.Models;
 namespace _5051.Backend
 {
     /// <summary>
-    /// Backend Mock DataSource for Avatars, to manage them
+    /// Backend Mock DataSource for Students, to manage them
     /// </summary>
     public class AdminDataSourceMock : IAdminInterface
     {
@@ -40,15 +40,15 @@ namespace _5051.Backend
         }
 
         /// <summary>
-        /// The Avatar List
+        /// Student List
         /// </summary>
         private List<AdminProfileModel> StudentList = new List<AdminProfileModel>();
 
         /// <summary>
-        /// Makes a new Avatar
+        /// Makes a new Student 
         /// </summary>
         /// <param name="data"></param>
-        /// <returns>Avatar Passed In</returns>
+        /// <returns>Student Passed In</returns>
         public AdminProfileModel Create(AdminProfileModel data)
         {
             StudentList.Add(data);
@@ -114,7 +114,7 @@ namespace _5051.Backend
         /// <summary>
         /// Return the full dataset
         /// </summary>
-        /// <returns>List of Avatars</returns>
+        /// <returns>List of Students</returns>
         public List<AdminProfileModel> StudentHome()
         {
             return StudentList;
