@@ -184,5 +184,9 @@ namespace _5051.Controllers
         {
             return View();
         }
+        public ActionResult NavCopy()
+        {
+            return View();
+        }
     }
 }
