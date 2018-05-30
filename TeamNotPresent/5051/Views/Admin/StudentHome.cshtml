@@ -3,15 +3,27 @@
     ViewBag.Title = "StudentHome";
 }
 
-<header class="w3-container w3-large">
-    <p class="w3-margin-right" style="font-size:large">
-        <i class="fa fa-cog w3-margin-right"></i>
-        <a href="~/Admin/MainHome"> Home </a>
-    </p>
+<ol class="breadcrumb">
+    <li><a href="~/Admin/MainHome">Home</a></li>
+  
+    <li class="active">Students</li>
+</ol>
+<style>
+    .bg {
+        /*/* The image used */
+        /*background-image: url('../../Content/img/portfolio-1.jpg');*/
+        background-color: white;
+        /* Full height */
+        height: 70%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-    </header>
+</style>
 
-    <div class="container">
+    <div class="container bg" style="text-align:center">
         <div class="row">
 
             @{
@@ -27,10 +39,11 @@
                     {
                         <a id="@item.Id" href="~/Admin/Read/@item.Id">
                             <div class="col-sm-3">
-                                <img src="~/Content/img/@item.Uri" width="90" height="150" />
+                                <img src="~/Content/img/@item.Uri" width="130" height="150" />
                                 <br />
-                                <span>
-                                    @item.Name
+                                <span><text style="align-content:center; font-size:medium;">
+                                          <strong>   @item.Name </strong>
+                                    </text>
                                 </span>
                             </div>
 

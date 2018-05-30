@@ -9,9 +9,10 @@
     .sidebar-nav-fixed {
         width: 14%;
     }
-    
+
     .boxed-grey {
         background: #f9f9f9;
+        background-color: dodgerblue;
         padding: 20px;
     }
 
@@ -22,6 +23,7 @@
     .avatar {
         margin-bottom: 20px;
     }
+
     .home-section {
         padding-top: 110px;
         padding-bottom: 110px;
@@ -29,23 +31,39 @@
         position: relative;
         z-index: 120;
     }
+
+    .bg {
+        /*/* The image used */
+        /*background-image: url('../../Content/img/portfolio-1.jpg');*/
+        background-color: dodgerblue ;
+        /* Full height */
+        height: 70%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
     
 </style>
 
-
+<div class="bg">
     <section class="home-section text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="wow bounceInUp" data-wow-delay="0.2s">
                         <div class="team boxed-grey">
-                            <div class="inner" style="font-family:'Comic Sans MS'; font-weight:bold; font-size:large">
+                            <div class="inner" style="font-family:'Comic Sans MS'; font-weight:bold; color:white">
                                 <div class="avatar">
                                     <a href="~/Admin/StudentHome">
-                                        <img src="~/Content/img/student-male.png" alt="" class="img-responsive img-circle" style="width:223px;height:223px;" />
+                                        <img src="~/Content/img/student-icon.png" alt="" class="img-responsive img-circle" style="width:223px;height:223px;" />
                                     </a>
                                 </div>
-                                <h4><strong>Student</strong></h4>
+                                
+                                <h4>
+                                 <strong>Student</strong></h4>
                             </div>
                         </div>
                     </div>
@@ -53,7 +71,7 @@
                 <div class="col-md-3">
                     <div class="wow bounceInUp" data-wow-delay="0.5s">
                         <div class="team boxed-grey">
-                            <div class="inner" style="font-weight:bold">
+                            <div class="inner" style="font-weight:bold; color:white">
 
 
                                 <div class="avatar">
@@ -69,12 +87,12 @@
                 <div class="col-md-3">
                     <div class="wow bounceInUp" data-wow-delay="0.8s">
                         <div class="team boxed-grey">
-                            <div class="inner" style="font-family:'Comic Sans MS'; font-weight:bold; font-size:16px">
+                            <div class="inner" style="font-family:'Comic Sans MS'; font-weight:bold; font-size:16px; color:white">
 
 
                                 <div class="avatar">
                                     <a href="~/Admin/StudentCalendar">
-                                        <img src="~/Content/img/calendar-circle-blue-512.png" alt="" class="img-responsive img-circle" style="width:223px;height:223px;" />
+                                        <img src="~/Content/img/calendar.png" alt="" class="img-responsive img-circle" style="width:223px;height:223px;" />
                                     </a>
                                 </div>
                                 <h4><strong>Calendar</strong></h4>
@@ -85,7 +103,7 @@
                 <div class="col-md-3">
                     <div class="wow bounceInUp" data-wow-delay="1s">
                         <div class="team boxed-grey">
-                            <div class="inner" style="font-family:'Comic Sans MS'; font-weight:bold; font-size:large">
+                            <div class="inner" style="font-family:'Comic Sans MS'; font-weight:bold; font-size:large; color:white">
 
 
                                 <div class="avatar">
@@ -101,6 +119,7 @@
             </div>
         </div>
     </section>
+</div>
 
 
 

@@ -2,13 +2,12 @@
 @{
     ViewBag.Title = "Update";
 }
-<header class="w3-container w3-large">
-    <p class="w3-margin-right" style="font-size:large">
-        <i class="fa fa-cog w3-margin-right"></i>
-        <a href="~/Admin/MainHome"> Home </a>
-    </p>
-
-</header>
+<ol class="breadcrumb">
+    <li><a href="~/Admin/MainHome">Home</a></li>
+    <li><a href="~/Admin/StudentHome">Students</a></li>
+    <li><a href="~/Admin/Read">Student</a></li>
+    <li class="active">Edit</li>
+</ol>
 
 <style>
     .sidebar-nav-fixed {
@@ -16,98 +15,103 @@
     }
 </style>
 
->
 
         @using (Html.BeginForm())
-    {
+        {
         @Html.AntiForgeryToken()
         @Html.HiddenFor(m => m.Id)
 
-
-        <div class="row">
-            <div class="col-sm-5 text-right">
-                @Html.DisplayNameFor(m => m.Uri)
-            </div>
-            <div class="col-sm-4">
-                @Html.EditorFor(m => m.Uri)
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-5 text-right">
-                @Html.DisplayNameFor(m => m.Name)
-            </div>
-            <div class="col-sm-4">
-                @Html.EditorFor(m => m.Name)
-               
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-5 text-right">
-                @Html.DisplayNameFor(m => m.PowerId)
-            </div>
-            <div class="col-sm-4">
-                @Html.EditorFor(m => m.PowerId)
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-5 text-right">
-                @Html.DisplayNameFor(m => m.PersonalContact)
-            </div>
-            <div class="col-sm-4">
-                @Html.EditorFor(m => m.PersonalContact)
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-5 text-right">
-                @Html.DisplayNameFor(m => m.GuardianContact)
-            </div>
-            <div class="col-sm-4">
-                @Html.EditorFor(m => m.GuardianContact)
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-5 text-right">
-                @Html.DisplayNameFor(m => m.Address)
-            </div>
-            <div class="col-sm-4">
-                @Html.EditorFor(m => m.Address)
-            </div>
-        </div>
-
-
-        @*<br />
-        <br />
-        <div class="row">
-            <div class="col-sm-3 text-right">
-            </div>
-            <div class="col-sm-4">
-                @Html.ActionLink("Cancel", "Index", new { id = Model.Id }, new { @class = "btn btn-success" })
-                <input type="submit" value="Create" class="btn btn-primary">
-            </div>
-        </div>*@
-
-        <br />
-        <br />
-       
-        <div class="row">
-            <div class="col-sm-3 text-right">
-            </div>
-            <div class="col-md-4">
-                @Html.ActionLink("Cancel", "StudentHome", new { id = Model.Id }, new { @class = "btn btn-success" })
-                <input type="submit" value="Update" class="btn btn-primary">
-           
-
-            </div>
-        </div>
-      
-
-}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"></h3>
     </div>
-</div>
+    <div class="panel-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                    <span class="label label-default">
+                        @Html.DisplayNameFor(m => m.Uri)
+                        </span>
+                </div>
+                <div class="col-sm-4">
+                    @Html.EditorFor(m => m.Uri)
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                    <span class="label label-default">
+                        @Html.DisplayNameFor(m => m.Name)
+                        </span>
+                </div>
+                <div class="col-sm-4">
+                    @Html.EditorFor(m => m.Name)
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                    <span class="label label-default">
+                        @Html.DisplayNameFor(m => m.PowerId)
+                        </span>
+                </div>
+                <div class="col-sm-4">
+                    @Html.EditorFor(m => m.PowerId)
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                    <span class="label label-default">
+                        @Html.DisplayNameFor(m => m.PersonalContact)
+                        </span>
+                </div>
+                <div class="col-sm-4">
+                    @Html.EditorFor(m => m.PersonalContact)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                    <span class="label label-default">
+                        @Html.DisplayNameFor(m => m.GuardianContact)
+                        </span>
+                </div>
+                <div class="col-sm-4">
+                    @Html.EditorFor(m => m.GuardianContact)
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                    <span class="label label-default">
+                        @Html.DisplayNameFor(m => m.Address)
+                        </span>
+                </div>
+                <div class="col-sm-4">
+                    @Html.EditorFor(m => m.Address)
+                </div>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="row">
+                <div class="col-sm-5 text-right">
+                </div>
+                <div class="col-md-4">
+                    @Html.ActionLink("Cancel", "StudentHome", new { id = Model.Id }, new { @class = "btn btn-success" })
+                    <input type="submit" value="Update" class="btn btn-primary">
+
+
+                </div>
+            </div>
+        </div>
+
+  
+        </div>
+    </div>
+        }
 
 
 

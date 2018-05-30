@@ -171,7 +171,7 @@ namespace _5051.Controllers
 
                     AdminBackend.Update(data);
 
-                    return RedirectToAction("Home");
+                    return RedirectToAction("StudentHome");
                 }
 
                 // Send back for edit

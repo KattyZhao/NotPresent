@@ -2,100 +2,111 @@
 @{
     ViewBag.Title = "Delete";
 }
-<header class="w3-container w3-large">
-    <p class="w3-margin-right" style="font-size:large">
-        <i class="fa fa-cog w3-margin-right"></i>
-        <a href="~/Admin/MainHome"> Home </a>
-    </p>
-
-</header>
+<ol class="breadcrumb">
+    <li><a href="~/Admin/MainHome">Home</a></li>
+    <li><a href="~/Admin/StudentHome">Students</a></li>
+    <li><a href="~/Admin/Read">Student Profile</a></li>
+    <li class="active">Delete</li>
+</ol>
 
 <style>
     .sidebar-nav-fixed {
         width: 14%;
     }
 </style>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
+     
 
-<div class="container">
-    <div class="row">
-      
-  
-        <div class="container">
-            <div class="row">
-
-                @{
-        if (Model == null)
-            {
-            <p>No Avatar</p>
-              }
-
-             else
-            {
-            <div class="row">
-                <h2>Delete Avatar</h2>
-                <br />
-                <br />
-
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-3 text-right">
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            @{
+                                if (Model == null)
+                                {
+                                    <p>No Avatar</p>
+                                }
+
+                                else
+                                {
+                                    <div class="row">
+                                        
+                                        <br />
+                                        <br />
+
+                                        <div class="row">
+                                            <div class="col-sm-5 text-right">
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <img src="~/Content/img/@Model.Uri" width="150" height="150" />
+                                                <br />
+                                                <span>
+                                                    <strong>
+                                                        <text style="text-align:center">
+                                                            @Model.Name
+                                                        </text>
+                                                    </strong>
+                                                    <br />
+                                                    <br />
+                                                    <br />
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        @using (Html.BeginForm())
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            @Html.HiddenFor(m => m.Id)
+                                            @Html.HiddenFor(m => m.Uri)
+                                            @Html.HiddenFor(m => m.Name)
+                                            @Html.HiddenFor(m => m.PowerId)
+                                            @Html.HiddenFor(m => m.PersonalContact)
+                                            @Html.HiddenFor(m => m.GuardianContact)
+                                            @Html.HiddenFor(m => m.Address)
+
+                                            <div class="row">
+                                                <div class="col-sm-5 text-right">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    @Html.ActionLink("Cancel", "Home", new { id = Model.Id }, new { @class = "btn btn-success" })
+                                                    <input type="submit" value="Delete" class="btn btn-danger">
+                                                </div>
+                                            </div>
+                                        }
+
+                                    </div>
+                                }
+
+                            }
+                        </div>
                     </div>
-                    <div class="col-sm-2">
-                        <img src="~/Content/img/@Model.Uri" width="75" height="75" />
-                        <br />
-                        <span>
-                            @Model.Name
-                            <br />
-                            <br />
-                            <br />
-                        </span>
-                    </div>
+
+
+                    @*<div class="col-md-8">
+                                    <img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            @Html.ActionLink("Delete", "Home", "Admin", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                        <div class="col-md-4">
+                                            @Html.ActionLink("Cancel", "Profile", "Admin", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>*@
+
                 </div>
-
-                @using (Html.BeginForm())
-    {
-            @Html.AntiForgeryToken()
-            @Html.HiddenFor(m => m.Id)
-            @Html.HiddenFor(m => m.Uri)
-            @Html.HiddenFor(m => m.Name)
-            @Html.HiddenFor(m => m.PowerId)
-            @Html.HiddenFor(m => m.PersonalContact)
-            @Html.HiddenFor(m => m.GuardianContact)
-            @Html.HiddenFor(m => m.Address)
-
-            <div class="row">
-                <div class="col-sm-3 text-right">
-                </div>
-                <div class="col-sm-4">
-                    @Html.ActionLink("Cancel", "Home", new { id = Model.Id }, new { @class = "btn btn-success" })
-                    <input type="submit" value="Delete" class="btn btn-danger">
-                </div>
-            </div>
-}
-
-            </div>
-}
-
-                }
             </div>
         </div>
-
-
-        @*<div class="col-md-8">
-                        <img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                @Html.ActionLink("Delete", "Home", "Admin", null, new { @class = "btn btn-primary" })
-                            </div>
-                            <div class="col-md-4">
-                                @Html.ActionLink("Cancel", "Profile", "Admin", null, new { @class = "btn btn-primary" })
-                            </div>
-                        </div>
-                </div>
-                </div>
-            </div>*@
-
     </div>
-</div>
 
 
