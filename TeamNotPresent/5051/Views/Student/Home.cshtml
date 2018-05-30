@@ -7,97 +7,111 @@
 
 <link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
 <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-    <style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .postcards {
-            padding: 10px;
-            display: inline-block;
+<style>
 
-        }
+    .postcards {
+        padding: 10px;
+        display: inline-block;
+    }
 
-        .m3 {
-            padding-top: 25px;
-        }
+    .m3 {
+        padding-top: 25px;
+    }
 
-        #earth_div {
-            padding-top: 25px;
-            padding-bottom: 25px;
-            padding-right: 25px;
-            
-        .body, h1, h2, h3, h4, h5, h6, .w3-wide
-        {
-            font-family: "Inconsolata", sans-serif;
-        }
-    </style>
+    #earth_div {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-right: 25px;
+   
+    .body, h1, h2, h3, h4, h5, h6, .w3-wide{
+        font-family: "Inconsolata", sans-serif;
+    }
 
-                <!-- Top header -->
-                <header class="w3-container w3-large">
-                    <p class="w3-right">
-                        <i class="fa fa-cog w3-margin-right"></i>
-                        <a href="~/Student/Nav">DashBoard</a>
+   .panel-success {
 
-                </header>
-
-                <!-- Top header -->
-
-                <header class="w3-container w3-xlarge">
-                    <p></p>
-                    <p class="w3-left">Welcome, @Model.Student.Name</p>
-
-                </header>
+   }
 
 
-                <header class=" w3-left w3-median">
+</style>
 
-                    <p id="demo"></p>
+@*Top header
+    <header class="w3-container w3-large">
+        <p class="w3-right">
+            <i class="fa fa-cog w3-margin-right"></i>
+            <a href="~/Student/Nav">DashBoard</a>
 
-                    <script>
+    </header>*@
 
-                        var dt = new Date();
+<ol class="breadcrumb">
+    <li><a href="~/Student/Nav">DashBoard</a></li>
+    <li class="active">Game</li>
+</ol>
 
-                        document.getElementById("demo").innerHTML = dt.toLocaleString();
+<!-- Top header -->
+<div class="panel panel-success" >
+    <div class="panel-heading" style="background-color:  #008882" >
+        <h3 class="panel-title"></h3>
+    </div>
+    <div class="panel-body">
 
-                        var myVar = setInterval(function () { myTimer() }, 1000);
+            <header class="w3-container w3-xlarge">
+                <p></p>
+                <p class="w3-right">Welcome, @Model.Student.Name</p>
+                
+            </header>
 
-                        function myTimer() {
 
-                            var d = new Date();
+            <header class=" w3-right w3-median">
 
-                            document.getElementById("demo").innerHTML = d.toLocaleString();
+                <p id="demo"></p>
 
-                        }
+                <script>
 
-                    </script>
+                    var dt = new Date();
 
-                </header>
+                    document.getElementById("demo").innerHTML = dt.toLocaleString();
 
-                <!-- reward point -->
+                    var myVar = setInterval(function () { myTimer() }, 1000);
 
-                <header class="w3-container w3-median">
+                    function myTimer() {
 
-                    <p></p>
+                        var d = new Date();
 
-                    <p class="w3-left">Reward Point：@Model.Student.Tokens</p>
+                        document.getElementById("demo").innerHTML = d.toLocaleString();
 
-                </header>
-                <!-- button -->
-                @*<button class=" w3-right" onclick="myFunction()">Claim</button>
+                    }
+
+                </script>
+
+            </header>
+
+            <!-- reward point -->
+
+            <header class="w3-container w3-median">
+
+                <p></p>
+
+                <p class="w3-right">Reward Point：@Model.Student.Tokens</p>
+
+            </header>
+            <!-- button -->
+            @*<button class=" w3-right" onclick="myFunction()">Claim</button>
                 <p id="demo"></p>
 
                 <script>
@@ -112,63 +126,65 @@
                 }
                 </script>*@
 
-                <!-- earth -->
-                <header>
-                    <script src="http://www.webglearth.com/v2/api.js"></script>
-                    <script>
+            <!-- earth -->
+
+            <header>
+                <script src="http://www.webglearth.com/v2/api.js"></script>
+                <script>
                 function initialize() {
                     var earth = new WE.map('earth_div');
                     WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
                    @{
-                    var count = 1;
-                    var DblQuote = Convert.ToChar(34);
-                    foreach (var pin in Model.MapPinLocationsList)
-                    {
+                       var count = 0;
+                       var DblQuote = Convert.ToChar(34);
+                       foreach (var pin in Model.MapPinLocationsList)
+                       {
 
-                        // Need to build the pins propertly
-                        // Need to set the Color
-                        // Need to set the Picture
+                           // Need to build the pins propertly
+                           // Need to set the Color
+                           // Need to set the Picture
 
-                        var line1 = "var marker" + count + "= WE.marker([" + pin.Latitude + "," + pin.Longitude + "]).addTo(earth);";
-                        var line2 = "marker" + count + ".bindPopup(";
+                           var line1 = "var marker" + count + "= WE.marker([" + pin.Latitude + "," + pin.Longitude + "]).addTo(earth);";
+                           var line2 = "marker" + count + ".bindPopup(";
 
 
-                        var line3 = DblQuote + "<div style=''><b>" + pin.Heading + "</b><br>"+pin.Body+"</br><body></div>" + DblQuote;
-                        var line4 = ", { maxWidth: 120, closeButton: true });";
-                        //var line2 = "marker" + count + ".bindPopup(" + '"' + pin.Heading + '"' + ", { maxWidth: 120, closeButton: false });";
-                        count++;
-                        var output = line2 + line3 + line4;
+                           var line3 = DblQuote + "<div style=''><b>" + pin.Heading + "</b><br>" + pin.Body + "</br><body></div>" + DblQuote;
+                           var line4 = ", { maxWidth: 120, closeButton: true });";
+                           //var line2 = "marker" + count + ".bindPopup(" + '"' + pin.Heading + '"' + ", { maxWidth: 120, closeButton: false });";
+                           count++;
+                           var output = line2 + line3 + line4;
 
                         @line1
                         @Html.Raw(output);
-                    }
+                       }
                 }
 
 
                 earth.setView([51.505, 0], 2);
 
 
-                // Start a simple rotation animation
-                //var before = null;
-                //requestAnimationFrame(function animate(now) {
-                    //var c = earth.getPosition();
-                    //var elapsed = before ? now - before : 0;
-                    //before = now;
-                    //earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 30)]);
-                    //requestAnimationFrame(animate);
-                //});
+                 //Start a simple rotation animation
+                var before = null;
+                requestAnimationFrame(function animate(now) {
+                    var c = earth.getPosition();
+                    var elapsed = before ? now - before : 0;
+                    before = now;
+                    earth.setCenter([c[0], c[1] + 0.1 * (elapsed / 30)]);
+                    requestAnimationFrame(animate);
+                });
 
 
                             }
-                    </script>
+                </script>
 
-                </header>
+            </header>
 
-                <body onload="initialize()">
-                    <div id="earth_div"></div>
-                </body>
 
-                @{
+            <body onload="initialize()">
+                <div id="earth_div"></div>
+            </body>
+
+            @{
                 // If no points, then don't show the buy button
                 if (Model.Student.Tokens > 0)
                 {
@@ -178,41 +194,56 @@
                         @Html.Hidden("StudentId", Model.Student.Id)
 
                         <input type="submit" value="Play" class="btn btn-success">
-                }
-
-            }
-                }
-
-
-
-                <div class="col-3">
-
-                    @{
-                        count = 0;
-
-                        foreach (var pin in Model.MapPinLocationsList)
-                        {
-                            if (count < Model.Student.Cities)
-                            {
-                                var line3 = DblQuote + "<div class='postcards w3-quarter' style = '' ><b>" + pin.Heading+ "</b><br></br><img src= "+ pin.Uri + " height=100 width=auto/ class='w3 - hover - opacity'></div>" + DblQuote;
-
-                                count++;
-
-                        @Html.Raw(line3);
-                }
-                else
-                {
-                    var line = DblQuote + "<div class='postcards w3-quarter' style = ''><img src= https://www.blurbusters.com/wp-content/uploads/2013/06/lock.png  height=100 width=auto></div>" + DblQuote;
-                    @Html.Raw(line);
-            }
-        }
-
                     }
-                </div>
-                <br />
-                <br />
 
-      <div>
-          <d>
-          </div>
-            </body>
+                }
+            }
+
+                        <div>
+                            @{
+                                var index =Model.Student.Cities - 1;
+                                if (index >= 0)
+                                {
+                                    var l1 = "<div style = '' ><b> Congraduation! You are currently at " + Model.MapPinLocationsList[index].Heading + "</b><br>"+ Model.MapPinLocationsList[index].Body + "</br></div>";
+                                   @Html.Raw(l1);
+}
+
+                            }
+                        </div>
+
+             
+            <div>
+                <br></br>
+                <br></br>
+                <br></br>
+                </div>
+            <div class="col-3">
+
+                @{
+                    count = 0;
+
+                    foreach (var pin in Model.MapPinLocationsList)
+                    {
+                        if (count < Model.Student.Cities)
+                        {
+                            var line3 = "<div class='postcards w3-quarter' style = '' ><b>" + pin.Heading + "</b><br></br><img src= " + pin.Uri + " height=100 width=auto/ class='w3 - hover - opacity'></div>";
+
+                            count++;
+
+                            @Html.Raw(line3);
+                        }
+                        else
+                        {
+                            var line = "<div class='postcards w3-quarter' style = ''><img src= https://www.blurbusters.com/wp-content/uploads/2013/06/lock.png  height=100 width=auto></div>" ;
+                            @Html.Raw(line);
+                        }
+                    }
+
+                }
+            </div>
+            <br />
+            <br />
+
+     </div>
+
+    </div>
