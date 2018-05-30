@@ -39,6 +39,15 @@ namespace _5051.Controllers
 
         public ActionResult Home(string id = null)
         {
+
+
+            var myData = GetMapData(id);
+            return View(myData);
+        }
+
+
+        public StudentHomeViewModel GetMapData(string id = null)
+        {
             // Get Student passed in, if no student then default a student.
             var myStudent = StudentBackend.Instance.Read(id);
             if (myStudent != null)
@@ -88,8 +97,9 @@ namespace _5051.Controllers
                 count++;
             }
 
-            return View(myData);
+            return myData;
         }
+
 
 
         /// <summary>
@@ -165,9 +175,10 @@ namespace _5051.Controllers
             return View();
         }
 
-        public ActionResult PostCards()
+        public ActionResult PostCards(string id=null)
         {
-            return View();
+            var myData = GetMapData(id);
+            return View(myData);
         }
 
         public ActionResult Calendar()

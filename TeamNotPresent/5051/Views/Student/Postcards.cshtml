@@ -1,4 +1,6 @@
-﻿@{
+﻿@model _5051.Models.StudentHomeViewModel
+@{
+
     ViewBag.Title = "PostCards";
 }
 
@@ -31,21 +33,39 @@
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active">
+                            @*<div class="item active">
                                 <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card1.png" alt="Pyramid Egypt" />
-                            </div>
-                            <div class="item">
-                                <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card2.png" alt="Fiji" />
-                            </div>
-                            <div class="item">
-                                <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card3bw.png" alt="Sydney AU" />
-                            </div>
-                            <div class="item">
-                                <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card4bw.png" alt="Taj Mahal IN" />
-                            </div>
-                            <div class="item">
-                                <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card5.png" alt="Brooklyn Bridge NY" />
-                            </div>
+                            </div>*@
+                            @*<div class="item">
+                                    <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card2.png" alt="Fiji" />
+                                </div>
+                                <div class="item">
+                                    <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card3bw.png" alt="Sydney AU" />
+                                </div>
+                                <div class="item">
+                                    <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card4bw.png" alt="Taj Mahal IN" />
+                                </div>
+                                <div class="item">
+                                    <img class="carousel-item-img img-fluid center-block" src="~/Content/img/card5.png" alt="Brooklyn Bridge NY" />
+                                </div>*@
+
+                            @{
+                                var count = 0;
+                                foreach (var item in Model.MapPinLocationsList)
+                                {
+                                    var isActive = "";
+
+                                    if (count == 0)
+                                    {
+                                        isActive = "active";
+                                        count++;
+                                    }
+
+                                    <div class="item PostCardSize @isActive">
+                                        <img class="carousel-item-img img-fluid center-block PostCardSize " src="@item.Uri" alt="@item.Heading" />
+                                    </div>
+                                }
+                            }
                         </div>
 
                         <!-- Left and right controls -->
