@@ -35,7 +35,8 @@
     if(!this.header) {
       //Create the header elements
       this.header = createElement('div', 'header');
-      this.header.className = 'header';
+        this.header.className = 'header';
+        this.header.color = 'black';
 
       this.title = createElement('h1');
 

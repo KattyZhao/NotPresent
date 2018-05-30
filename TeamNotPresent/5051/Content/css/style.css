@@ -35,7 +35,8 @@ h2 {
 }
 
 .fc-event .fc-bg {
-  background-color: #337ab7;
+  /*background-color: #337ab7;*/
+  background-color: lightyellow;
 }
 
 .navbar-btn {
@@ -53,5 +54,5 @@ h2 {
 }
 
 .fc-today {
-  background-color:  crimson;
+  background-color:  lightyellow;
 }
