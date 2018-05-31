@@ -5,21 +5,13 @@
     ViewBag.Title = "Home";
 }
 
-<link href="~/Content/styles.css" rel="stylesheet" type="text/css" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -38,16 +30,11 @@
         padding-top: 25px;
         padding-bottom: 25px;
         padding-right: 25px;
-   
-    .body, h1, h2, h3, h4, h5, h6, .w3-wide{
+        .body, h1, h2, h3, h4, h5, h6, .w3-wide
+
+    {
         font-family: "Inconsolata", sans-serif;
     }
-
-   .panel-success {
-
-   }
-
-
 </style>
 
 @*Top header
@@ -64,73 +51,82 @@
 </ol>
 
 <!-- Top header -->
-<div class="panel panel-success" >
-    <div class="panel-heading" style="background-color:  #008882" >
+<div class="panel panel-success">
+    <div class="panel-heading" style="background-color:  #008882">
         <h3 class="panel-title"></h3>
     </div>
     <div class="panel-body">
 
-            <header class="w3-container w3-xlarge">
-                <p></p>
-                <p class="w3-right">Welcome, @Model.Student.Name</p>
-                
-            </header>
+        <header class="w3-container w3-xlarge">
+            <p></p>
+            <p class="w3-right">Welcome, @Model.Student.Name</p>
+
+        </header>
 
 
-            <header class=" w3-right w3-median">
+        <header class=" w3-right w3-median">
 
-                <p id="demo"></p>
+            <p id="demo"></p>
 
-                <script>
+            <script>
 
-                    var dt = new Date();
+                var dt = new Date();
 
-                    document.getElementById("demo").innerHTML = dt.toLocaleString();
+                document.getElementById("demo").innerHTML = dt.toLocaleString();
 
-                    var myVar = setInterval(function () { myTimer() }, 1000);
+                var myVar = setInterval(function () { myTimer() }, 1000);
 
-                    function myTimer() {
+                function myTimer() {
 
-                        var d = new Date();
+                    var d = new Date();
 
-                        document.getElementById("demo").innerHTML = d.toLocaleString();
+                    document.getElementById("demo").innerHTML = d.toLocaleString();
 
-                    }
-
-                </script>
-
-            </header>
-
-            <!-- reward point -->
-
-            <header class="w3-container w3-median">
-
-                <p></p>
-
-                <p class="w3-right">Reward Point：@Model.Student.Tokens</p>
-
-            </header>
-            <!-- button -->
-            @*<button class=" w3-right" onclick="myFunction()">Claim</button>
-                <p id="demo"></p>
-
-                <script>
-                function myFunction() {
-                var txt;
-                if (confirm("Click to claim your extra reward point")) {
-                txt = "You have clicked!";
-                } else {
-                txt = "You pressed Cancel!";
                 }
-                document.getElementById("demo").innerHTML = txt;
-                }
-                </script>*@
 
-            <!-- earth -->
+            </script>
 
-            <header>
-                <script src="http://www.webglearth.com/v2/api.js"></script>
-                <script>
+        </header>
+
+        <!-- reward point -->
+
+        <header class="w3-container w3-median">
+
+            <p></p>
+
+            <p class="w3-right">Reward Point：@Model.Student.Tokens</p>
+
+        </header>
+
+
+        <!-- earth -->
+        <!-- button -->
+
+
+        
+
+        @{
+        // If no points, then don't show the buy button
+        if (Model.Student.Tokens > 0)
+        {
+            using (Html.BeginForm("ResetPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.Hidden("StudentId", Model.Student.Id)
+
+
+              <div class="w3-right">
+                <input type="submit" value="Reset" class="btn btn-success" style=" background-color: #008882 ;border:none; color: white;padding: 15px 25px;
+                  text-align: center;">
+              </div>
+        }
+
+    }
+        }
+
+        <header>
+            <script src="http://www.webglearth.com/v2/api.js"></script>
+            <script>
                 function initialize() {
                     var earth = new WE.map('earth_div');
                     WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
@@ -175,75 +171,85 @@
 
 
                             }
-                </script>
+            </script>
 
-            </header>
+        </header>
 
 
-            <body onload="initialize()">
-                <div id="earth_div"></div>
-            </body>
+        <body onload="initialize()">
+            <div id="earth_div"></div>
+        </body>
+
+
+
+
+
+
+
+        @{
+        // If no points, then don't show the buy button
+        if (Model.Student.Tokens > 0)
+        {
+            using (Html.BeginForm("BuyPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.Hidden("StudentId", Model.Student.Id)
+
+
+
+                <input type="submit" value="Play" class="btn btn-success" style=" background-color: #008882 ;border:none; color: white;padding: 15px 25px;
+                  text-align: center;">
+
+        }
+
+    }
+        }
+
+        <div>
+            @{
+            var index = Model.Student.Cities - 1;
+            if (index >= 0)
+            {
+                var l1 = "<div style = '' ><b> Congraduation! You are currently at " + Model.MapPinLocationsList[index].Heading + "</b><br>" + Model.MapPinLocationsList[index].Body + "</br></div>";
+                @Html.Raw(l1);
+        }
+
+            }
+        </div>
+
+
+        <div>
+            <br></br>
+            <br></br>
+            <br></br>
+        </div>
+        <div class="col-3">
 
             @{
-                // If no points, then don't show the buy button
-                if (Model.Student.Tokens > 0)
+                count = 0;
+
+                foreach (var pin in Model.MapPinLocationsList)
                 {
-                    using (Html.BeginForm("BuyPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    if (count < Model.Student.Cities)
                     {
-                        @Html.AntiForgeryToken()
-                        @Html.Hidden("StudentId", Model.Student.Id)
+                        var line3 = "<div class='postcards w3-quarter' style = '' ><b>" + pin.Heading + "</b><br></br><img src= " + pin.Uri + " height=100 width=auto/ class='w3 - hover - opacity'></div>";
 
-                        <input type="submit" value="Play" class="btn btn-success">
-                    }
+                        count++;
 
-                }
+                    @Html.Raw(line3);
+            }
+            else
+            {
+                var line = "<div class='postcards w3-quarter' style = ''><b></b><br></br><img src= https://www.blurbusters.com/wp-content/uploads/2013/06/lock.png  height=100 width=auto></div>";
+                @Html.Raw(line);
+        }
+    }
             }
 
-                        <div>
-                            @{
-                                var index =Model.Student.Cities - 1;
-                                if (index >= 0)
-                                {
-                                    var l1 = "<div style = '' ><b> Congraduation! You are currently at " + Model.MapPinLocationsList[index].Heading + "</b><br>"+ Model.MapPinLocationsList[index].Body + "</br></div>";
-                                   @Html.Raw(l1);
-}
-
-                            }
-                        </div>
-
-             
-            <div>
-                <br></br>
-                <br></br>
-                <br></br>
-                </div>
-            <div class="col-3">
-
-                @{
-                    count = 0;
-
-                    foreach (var pin in Model.MapPinLocationsList)
-                    {
-                        if (count < Model.Student.Cities)
-                        {
-                            var line3 = "<div class='postcards w3-quarter' style = '' ><b>" + pin.Heading + "</b><br></br><img src= " + pin.Uri + " height=100 width=auto/ class='w3 - hover - opacity'></div>";
-
-                            count++;
-
-                            @Html.Raw(line3);
-                        }
-                        else
-                        {
-                            var line = "<div class='postcards w3-quarter' style = ''><img src= https://www.blurbusters.com/wp-content/uploads/2013/06/lock.png  height=100 width=auto></div>" ;
-                            @Html.Raw(line);
-                        }
-                    }
-
-                }
-            </div>
-            <br />
-            <br />
-
-     </div>
+        </div>
+        <br />
+        <br />
 
     </div>
+
+</div>
