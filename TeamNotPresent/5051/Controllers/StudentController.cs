@@ -160,6 +160,61 @@ namespace _5051.Controllers
             }
         }
 
+        /// <summary>
+        /// This Claim post will take 10 points from the account, and give a new Map pin.
+        /// Then it redirects back to Home to show the updates
+        /// </summary>
+        /// <returns></returns>
+        /// 
+        [HttpPost]
+        public ActionResult ResetPin([Bind(Include=
+                                        "StudentId,"+
+                                        "Points,"+
+                                        "StudentOwnedPins,"+
+                                        "")] StudentClaimViewModel data)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if (data == null)
+                    {
+                        return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                    }
+
+                    //if (string.IsNullOrEmpty(data.StudentId))
+                    //{
+                    //    return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                    //}
+
+
+                    var myStudent = StudentBackend.Instance.Read(data.StudentId);
+                    if (myStudent == null)
+                    {
+                        return RedirectToAction("Error", new { route = "Home", action = "Error" });
+                    }
+
+
+                    myStudent.Tokens = 100;
+                   
+                    myStudent.Cities = 0;
+                    StudentBackend.Instance.Update(myStudent);
+                    
+
+                    // Call to return the home view.
+                    return RedirectToAction("Home", "Student", new { id = data.StudentId });
+                }
+
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+
+            }
+            catch
+            {
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+        }
+
+
         public ActionResult Nav()
         {
             return View();
