@@ -9,7 +9,11 @@
     <li class="active">Student Profie</li>
 </ol>
 
-
+<script>
+    function myFunction() {
+        window.print();
+    }
+</script>
 
     @{
         if (Model == null)
@@ -78,7 +82,7 @@
                                 @Html.ActionLink("Edit", "Update", new { id = Model.Id }, new { @class = "btn btn-primary" })
                             </div>
                             <div class="col-md-4 text-center">
-                                @Html.ActionLink("Print", "Print", "Admin", null, new { @class = "btn btn-primary" })
+                                <button onclick="myFunction()">Print</button>
                             </div>
                             <div class="col-md-4 text-center">
                                 @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })

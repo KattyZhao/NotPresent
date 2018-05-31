@@ -1,4 +1,4 @@
-﻿
+﻿@model _5051.Models.AdminProfileModel
 @{
     ViewBag.Title = "Print";
 }
@@ -13,6 +13,88 @@
         width: 14%;
     }
 </style>
+<script>
+    function myFunction() {
+        window.print();
+    }
+</script>
+
+<button onclick="myFunction()">Print this page</button>
+
+@{
+    if (Model == null)
+    {
+        <p>No Student</p>
+    }
+
+    else
+    {
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"></h3>
+            </div>
+            <div class="panel-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div class="thumbnail">
+                                <img src="~/Content/img/@Model.Uri" width="150" height="150" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">
+                                @Html.DisplayNameFor(m => m.Name)
+                            </span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">@Html.DisplayFor(m => m.Name)</font>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">
+                                @Html.DisplayNameFor(m => m.PersonalContact)
+                            </span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">@Html.DisplayFor(m => m.PersonalContact)</font>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">
+                                @Html.DisplayNameFor(m => m.GuardianContact)
+                            </span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">@Html.DisplayFor(m => m.GuardianContact)</font>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">
+                            <span class="label label-default">
+                                @Html.DisplayNameFor(m => m.Address)
+                            </span>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <font size="3">@Html.DisplayFor(m => m.Address)</font>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    }
+
+}
+
+
+
+
 
 
 

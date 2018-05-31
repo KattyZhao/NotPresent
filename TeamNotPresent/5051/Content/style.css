@@ -48,8 +48,9 @@ body {
   padding: 0;
   font-size: 20px;
   line-height: 50px;
-  font-weight: 100;
+  font-weight: 800;
   letter-spacing: 1px;
+  color:white;
 }
 
 .left, .right {
@@ -134,8 +135,8 @@ body {
 }
 
 .day.today {
-  color: rgba(156, 202, 235, 1);
-  background-color: green;
+  /*color: rgba(156, 202, 235, 1);*/
+  background-color: lightseagreen;
 
 }
 
@@ -218,7 +219,7 @@ body {
   padding: 7px 0;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: green;
+  background-color: lightseagreen;
 }
 
 .events.in {
@@ -272,23 +273,24 @@ body {
 }
 
 .legend {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30px;
-  background: rgba(60, 60, 60, 1);
-  line-height: 30px;
-  background-color: midnightblue;
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(60, 60, 60, 1);
+    line-height: 30px;
+    background-color: midnightblue;
+    color: white;
 }
 
 .entry {
-  position: relative;
-  padding: 0 0 0 25px;
-  font-size: 13px;
-  display: inline-block;
-  line-height: 30px;
-  background: transparent;
+    position: relative;
+    padding: 0 0 0 25px;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 30px;
+    background: transparent;
+    color: white;
 }
 
 .entry:after {
@@ -298,12 +300,25 @@ body {
   width: 5px;
   top: 12px;
   left: 14px;
+  color:white;
 }
 
-.entry.blue:after { background: rgba(156, 202, 235, 1); }
-.entry.orange:after { background: rgba(247, 167, 0, 1); }
-.entry.green:after { background: rgba(153, 198, 109, 1); }
-.entry.yellow:after { background: rgba(249, 233, 0, 1); }
+    .entry.blue:after {
+        background: rgba(156, 202, 235, 1);
+        color: white;
+    }
+    .entry.orange:after {
+        background: rgba(247, 167, 0, 1);
+        color: white;
+    }
+    .entry.green:after {
+        background: rgba(153, 198, 109, 1);
+        color: white;
+    }
+    .entry.yellow:after {
+        background: rgba(249, 233, 0, 1);
+        color: white;
+    }
 
 /* Animations are cool!  */
 @-webkit-keyframes moveFromTopFade {
