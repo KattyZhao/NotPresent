@@ -372,6 +372,7 @@
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\bg-masthead.jpg" />
+    <Content Include="Content\img\cardny.png" />
     <Content Include="Content\img\card8v.png" />
     <Content Include="Content\img\boy-going-to-school-walking-and-waving-back-to-school-clipart-6726.jpg" />
     <Content Include="Content\img\boy-student-with-bagpack-happily-jump-in-the-air-back-to-school-clipart.jpg" />
@@ -381,7 +382,6 @@
     <Content Include="Content\img\calendar-circle-blue-512.png" />
     <Content Include="Content\img\calendar.png" />
     <Content Include="Content\img\call-report-icon-3.png" />
-    <Content Include="Content\img\card2.png" />
     <Content Include="Content\img\cal.png" />
     <Content Include="Content\img\cal1.png" />
     <Content Include="Content\img\cal2.png" />
@@ -405,12 +405,11 @@
     <Content Include="Content\img\graphStudent.jpg" />
     <Content Include="Content\img\graphTeacher.jpg" />
     <Content Include="Content\img\card3.png" />
-    <Content Include="Content\img\card3bw.png" />
     <Content Include="Content\img\hand-with-pencil-stars-checkmark-clipart.jpg" />
     <Content Include="Content\img\icon_038490_256.png" />
     <Content Include="Content\img\Logout-512.png" />
     <Content Include="Content\img\multicultural-children-around-the-globe-clipart-622.jpg" />
-    <Content Include="Content\img\card5.png" />
+    <Content Include="Content\img\cardsy.png" />
     <Content Include="Content\img\portfolio-1.jpg" />
     <Content Include="Content\img\portfolio-2.jpg" />
     <Content Include="Content\img\portfolio-3.jpg" />
@@ -433,7 +432,6 @@
     <Content Include="Content\img\Student.PNG" />
     <Content Include="Content\img\studentreport.PNG" />
     <Content Include="Content\img\stuLogin.jpg" />
-    <Content Include="Content\img\card4bw.png" />
     <Content Include="Content\img\card4.png" />
     <Content Include="Content\img\card6.png" />
     <Content Include="Content\img\TN_traveling-around-the-world-clipart-5911.jpg" />

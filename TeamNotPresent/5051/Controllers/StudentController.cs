@@ -69,11 +69,11 @@ namespace _5051.Controllers
             // Katty  Add more example cities, about 10
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 30.058056, Longitude = 31.228889, Heading = "Egypt", Body = "Pyramids", color = "grey", Uri = "/Content/img/card1.png"});
             
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 40.730610, Longitude = -73.935242, Heading = "New York", Body = "Brooklyn Bridge", color = "grey", Uri = "/Content/img/card2.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 40.730610, Longitude = -73.935242, Heading = "New York", Body = "Brooklyn Bridge", color = "grey", Uri = "/Content/img/cardny.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 21.7679, Longitude = 78.8718, Heading = "India", Body = "Agra", color = "grey", Uri = "/Content/img/card4.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 39.882211, Longitude = 116.406584, Heading = "China", Body = "Beijing", color = "grey", Uri = "/Content/img/card6.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 35.652832, Longitude = 139.839478, Heading = "Japan", Body = "Mt.Fuji", color = "grey", Uri = "/Content/img/card3.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = -33.865143, Longitude = 151.209900, Heading = "Australia", Body = "Sydney", color = "grey", Uri = "/Content/img/card5.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = -33.865143, Longitude = 151.209900, Heading = "Australia", Body = "Sydney", color = "grey", Uri = "/Content/img/cardsy.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = -8.409518, Longitude = 115.188916, Heading = "Indonedia", Body = "Bali", color = "grey", Uri = "/Content/img/card7.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 51.5079, Longitude = -0.08772649, Heading = "United Kingdom", Body = "London", color = "grey", Uri = "/Content/img/card8v.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 47.61032, Longitude = -122.3206, Heading = "Seattle", Body = "Space Needle", color = "grey", Uri = "/Content/img/card10v.png" });
