@@ -75,11 +75,11 @@ namespace _5051.Controllers
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 35.652832, Longitude = 139.839478, Heading = "Japan", Body = "Mt.Fuji", color = "grey", Uri = "/Content/img/card3.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = -33.865143, Longitude = 151.209900, Heading = "Australia", Body = "Sydney", color = "grey", Uri = "/Content/img/cardsy.png" });
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = -8.409518, Longitude = 115.188916, Heading = "Indonedia", Body = "Bali", color = "grey", Uri = "/Content/img/card7.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 51.5079, Longitude = -0.08772649, Heading = "United Kingdom", Body = "London", color = "grey", Uri = "/Content/img/card8v.png" });
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 47.61032, Longitude = -122.3206, Heading = "Seattle", Body = "Space Needle", color = "grey", Uri = "/Content/img/card10v.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 51.5079, Longitude = -0.08772649, Heading = "United Kingdom", Body = "London", color = "grey", Uri = "/Content/img/cardbb.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 47.61032, Longitude = -122.3206, Heading = "Seattle", Body = "Space Needle", color = "grey", Uri = "/Content/img/cardsn.png" });
 
 
-            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 48.856614, Longitude = 2.352222, Heading = "France", Body = "Paris", color = "grey", Uri = "/Content/img/card9v.png" });
+            myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 48.856614, Longitude = 2.352222, Heading = "France", Body = "Paris", color = "grey", Uri = "/Content/img/cardet.png" });
 
 
 

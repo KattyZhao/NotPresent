@@ -372,6 +372,7 @@
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\bg-masthead.jpg" />
+    <Content Include="Content\img\cardbb.png" />
     <Content Include="Content\img\cardny.png" />
     <Content Include="Content\img\card8v.png" />
     <Content Include="Content\img\boy-going-to-school-walking-and-waving-back-to-school-clipart-6726.jpg" />
@@ -397,6 +398,7 @@
     <Content Include="Content\img\earth.jpg" />
     <Content Include="Content\img\earthColor.jpg" />
     <Content Include="Content\img\card9v.png" />
+    <Content Include="Content\img\cardet.png" />
     <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\flat-illustration-of-interior-school-classroom-student-desks-clipart.jpg" />
     <Content Include="Content\img\fun-watch-character-holding-a-school-pencil-clipart-6565.jpg" />
@@ -419,6 +421,7 @@
     <Content Include="Content\img\profilePic.png" />
     <Content Include="Content\img\smiling-cute-girl-with-her-bag-pack-back-to-school-clipart.jpg" />
     <Content Include="Content\img\card10v.png" />
+    <Content Include="Content\img\cardsn.png" />
     <Content Include="Content\img\statistics-market-icon.png" />
     <Content Include="Content\img\stuCheckIn.jpg" />
     <Content Include="Content\img\prof.png" />
