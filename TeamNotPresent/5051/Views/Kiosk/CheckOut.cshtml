@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<p class="text-left" style="font-size:large"><strong>If you stay you can continue earning points...</strong></p>
+<div class="row">
+    <div class="text-center">
+        <img src="~/Content/img/chkOutConf.jpg" alt="chec-out conf" style="width:300px;height:300px">
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<div class="col-md-5 text-center">
+    @Html.ActionLink("Close", "Index", "Kiosk", new { @class = "btn btn-success" })
+</div>
+<div class="col-md-6 text-center">
+    @Html.ActionLink("Check-Out Anyway", "Index", "Kiosk", new { @class = "btn btn-success" })
+</div>
+

@@ -55,12 +55,12 @@ namespace _5051.Controllers
             return RedirectToAction("Index");
         }
         //method to redirect to a check in conf.
-        public ActionResult checkInConf()
+        public ActionResult CheckIn()
         {
             return View();
         }
-        //method to redirect to a cehck out conf.
-        public ActionResult checkOutConf()
+        //method to redirect to a check out conf.
+        public ActionResult CheckOut()
         {
             return View();
         }

@@ -575,6 +575,8 @@
     <Content Include="Views\Student\Nav.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\NavCopy.cshtml" />
+    <Content Include="Views\Kiosk\CheckIn.cshtml" />
+    <Content Include="Views\Kiosk\CheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
