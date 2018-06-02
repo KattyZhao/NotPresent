@@ -85,8 +85,20 @@
             <script src='/Scripts/js/events.js'></script>
             <script src="/Scripts/js/calendar.js"></script>
         }
+        if (urlpart == "Kiosk")
+        {
+            <script>
+                $(".img-rounded").click(function () {
+                    $(this).css("opacity", "0.2");
+                    $(".img-rounded").wrap($('<a>', {
+                        href: '/Kiosk/CheckOut'
+                    }));
+                });
+            </script>
+        }
 
     }
+
 
     
     
