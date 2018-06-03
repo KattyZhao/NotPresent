@@ -135,16 +135,16 @@ namespace _5051.Backend
         public void Initialize()
         {
           
-            Create(new AdminProfileModel("african-american-maile-student-in-unifrom-with-backpack-clipart.jpg", "Jack", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("boy-student-with-bagpack-happily-jump-in-the-air-back-to-school-clipart.jpg", "Jea", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("boy-student-with-his-bag-pack-and-book-back-to-school-clipart.jpg", "Kevin", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("boy-wearing-glasses-reading-book-back-to-school-clipart.jpg", "Issac", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("girl-student-back-to-school-clipart-2.jpg", "Diamond", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("smiling-cute-girl-with-her-bag-pack-back-to-school-clipart.jpg", "Sheila", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("boy-going-to-school-walking-and-waving-back-to-school-clipart-6726.jpg", "Bryce", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("boy-student-with-bagpack-happily-jump-in-the-air-back-to-school-clipart.jpg", "Joey", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("boy-student-with-his-bag-pack-and-book-back-to-school-clipart.jpg", "Harry", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
-            Create(new AdminProfileModel("girl-showing-back-to-school-happily-clipart-2.jpg", "Rachel", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("boy 1_crop.png", "Mike", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("girl 1_crop.png", "Jea", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("boy 2_crop.png", "Kevin", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("boy 3_crop.png", "Issac", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("girl 2_crop.png", "Diamond", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("girl 3_crop.png", "Sheila", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("boy 4_crop.png", "Bryce", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("boy 5_crop.png", "Joey", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("girl 4_crop.png", "Harry", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
+            Create(new AdminProfileModel("girl 5_crop.png", "Rachel", "2345682", "564738289", "5784983977", "344,56th Ave,Marshall Road,Seattle,WA-98065"));
 
         }
     }

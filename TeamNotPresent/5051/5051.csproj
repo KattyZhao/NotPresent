@@ -372,6 +372,11 @@
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\bg-masthead.jpg" />
+    <Content Include="Content\img\boy 1_crop.png" />
+    <Content Include="Content\img\boy 2_crop.png" />
+    <Content Include="Content\img\boy 3_crop.png" />
+    <Content Include="Content\img\boy 4_crop.png" />
+    <Content Include="Content\img\boy 5_crop.png" />
     <Content Include="Content\img\cardbb.png" />
     <Content Include="Content\img\cardny.png" />
     <Content Include="Content\img\card8v.png" />
@@ -402,6 +407,11 @@
     <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\flat-illustration-of-interior-school-classroom-student-desks-clipart.jpg" />
     <Content Include="Content\img\fun-watch-character-holding-a-school-pencil-clipart-6565.jpg" />
+    <Content Include="Content\img\girl 1_crop.png" />
+    <Content Include="Content\img\girl 2_crop.png" />
+    <Content Include="Content\img\girl 3_crop.png" />
+    <Content Include="Content\img\girl 4_crop.png" />
+    <Content Include="Content\img\girl 5_crop.png" />
     <Content Include="Content\img\girl-showing-back-to-school-happily-clipart-2.jpg" />
     <Content Include="Content\img\girl-student-back-to-school-clipart-2.jpg" />
     <Content Include="Content\img\graphStudent.jpg" />

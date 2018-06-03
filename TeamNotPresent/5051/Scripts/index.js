@@ -322,16 +322,39 @@
 
 !function() {
   var data = [
-    { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-04-08' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-04-14' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-04-21' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-04-29' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-05-05' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-05-12' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-05-19' },
-      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'orange', date: '2018-05-26' },
+    { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-04-08' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-04-14' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-04-21' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-04-29' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-05-05' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-05-12' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-05-19' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-05-31' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-06-07' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-06-14' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-06-21' },
+      { eventName: 'Assignmentdue', calendar: 'Assignments', color: 'green', date: '2018-06-28' },
+      { eventName: 'Summer Break Starts', calendar: 'Holidays', color: 'yellow', date: '2018-06-22' },
+      { eventName: 'New Year', calendar: 'Holidays', color: 'yellow', date: '2019-01-01' },
+      { eventName: 'Spring Break Starts', calendar: 'Holidays', color: 'yellow', date: '2018-04-19' },
+      { eventName: 'Spring Break Ends', calendar: 'Holidays', color: 'yellow', date: '2018-04-23' },
+  
+  
+      { eventName: 'Thanksgiving Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-11-23' },
+      { eventName: 'Thanksgiving Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-11-24' },
+      { eventName: 'Christmas Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-12-25' },
+      { eventName: 'Christmas Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-12-26' },
+      { eventName: 'Christmas Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-12-27' },
+      { eventName: 'Christmas Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-12-28' },
+      { eventName: 'Christmas Holiday', calendar: 'Holidays', color: 'yellow', date: '2018-12-29' },
+    
+      { eventName: 'Last Day of School', calendar: 'Holidays', color: 'yellow', date: '2018-06-16' },
+      { eventName: 'Memorial Day', calendar: 'Holidays', color: 'yellow', date: '2018-08-28' },
+      { eventName: 'Martin Luther King Jr. Day', calendar: 'Holidays', color: 'yellow', date: '2018-01-15' },
+      { eventName: 'Veterans Day', calendar: 'Holidays', color: 'yellow', date: '2018-11-10' },
 
-    { eventName: 'midterm', calendar: 'Exams', color: 'blue', date: '2018-05-17' },
+
+    { eventName: 'midterm', calendar: 'Exams', color: 'blue', date: '2018-06-17' },
 
   ];
 
