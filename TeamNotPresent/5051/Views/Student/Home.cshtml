@@ -107,7 +107,7 @@
 
         @{
         // If no points, then don't show the buy button
-        if (Model.Student.Tokens > 0)
+        if (Model.Student.Tokens >= 0)
         {
             using (Html.BeginForm("ResetPin", "Student", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
