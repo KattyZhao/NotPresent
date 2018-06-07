@@ -5,7 +5,6 @@
 <ol class="breadcrumb">
     <li><a href="~/Admin/MainHome">Home</a></li>
     <li><a href="~/Admin/StudentHome">Students</a></li>
-    <li><a href="~/Admin/Read">Student Profile</a></li>
     <li class="active">Delete</li>
 </ol>
 
@@ -75,8 +74,9 @@
                                                 <div class="col-sm-5 text-right">
                                                 </div>
                                                 <div class="col-sm-4">
-                                                    @Html.ActionLink("Cancel", "Home", new { id = Model.Id }, new { @class = "btn btn-success" })
                                                     <input type="submit" value="Delete" class="btn btn-danger">
+                                                    @Html.ActionLink("Cancel", "StudentHome", new { id = Model.Id }, new { @class = "btn btn-success" })
+
                                                 </div>
                                             </div>
                                         }
@@ -87,22 +87,6 @@
                             }
                         </div>
                     </div>
-
-
-                    @*<div class="col-md-8">
-                                    <img src="~/Content/img/prof.png" style="margin-bottom: 30px;" />
-
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            @Html.ActionLink("Delete", "Home", "Admin", null, new { @class = "btn btn-primary" })
-                                        </div>
-                                        <div class="col-md-4">
-                                            @Html.ActionLink("Cancel", "Profile", "Admin", null, new { @class = "btn btn-primary" })
-                                        </div>
-                                    </div>
-                            </div>
-                            </div>
-                        </div>*@
 
                 </div>
             </div>

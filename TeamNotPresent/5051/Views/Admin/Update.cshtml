@@ -5,7 +5,6 @@
 <ol class="breadcrumb">
     <li><a href="~/Admin/MainHome">Home</a></li>
     <li><a href="~/Admin/StudentHome">Students</a></li>
-    <li><a href="~/Admin/Read">Student</a></li>
     <li class="active">Edit</li>
 </ol>
 
@@ -29,64 +28,95 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 text-right">
-                    <span class="label label-default">
+                    <span class="label label-default" style="font-size:medium">
                         @Html.DisplayNameFor(m => m.Uri)
-                        </span>
+                    </span>
                 </div>
-                <div class="col-sm-4">
-                    @Html.EditorFor(m => m.Uri)
+                <div class="caption col-sm-4">
+                    <button type="button" @*class="btn btn-info btn-lg"*@ data-toggle="modal" data-target="#chgProPic">Add Picture</button>
                 </div>
+                <br />
+                <!-- Modal -->
+                <div class="modal fade" id="chgProPic" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <label>Upload File</label>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input type="file">
+                                    <p class="help-block">Only png and jpg allowed</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <br />
 
             <div class="row">
                 <div class="col-sm-5 text-right">
-                    <span class="label label-default">
+                    <span class="label label-default" style="font-size:medium">
                         @Html.DisplayNameFor(m => m.Name)
-                        </span>
+                    </span>
                 </div>
                 <div class="col-sm-4">
                     @Html.EditorFor(m => m.Name)
 
                 </div>
             </div>
+            <br />
 
             <div class="row">
                 <div class="col-sm-5 text-right">
-                    <span class="label label-default">
+                    <span class="label label-default" style="font-size:medium">
                         @Html.DisplayNameFor(m => m.PowerId)
-                        </span>
+                    </span>
                 </div>
                 <div class="col-sm-4">
                     @Html.EditorFor(m => m.PowerId)
                 </div>
             </div>
+            <br />
 
             <div class="row">
                 <div class="col-sm-5 text-right">
-                    <span class="label label-default">
+                    <span class="label label-default" style="font-size:medium">
                         @Html.DisplayNameFor(m => m.PersonalContact)
-                        </span>
+                    </span>
                 </div>
                 <div class="col-sm-4">
                     @Html.EditorFor(m => m.PersonalContact)
                 </div>
             </div>
+            <br />
+
             <div class="row">
                 <div class="col-sm-5 text-right">
-                    <span class="label label-default">
+                    <span class="label label-default" style="font-size:medium">
                         @Html.DisplayNameFor(m => m.GuardianContact)
-                        </span>
+                    </span>
                 </div>
                 <div class="col-sm-4">
                     @Html.EditorFor(m => m.GuardianContact)
                 </div>
             </div>
+            <br />
 
             <div class="row">
                 <div class="col-sm-5 text-right">
-                    <span class="label label-default">
+                    <span class="label label-default" style="font-size:medium">
                         @Html.DisplayNameFor(m => m.Address)
-                        </span>
+                    </span>
                 </div>
                 <div class="col-sm-4">
                     @Html.EditorFor(m => m.Address)
@@ -100,8 +130,9 @@
                 <div class="col-sm-5 text-right">
                 </div>
                 <div class="col-md-4">
-                    @Html.ActionLink("Cancel", "StudentHome", new { id = Model.Id }, new { @class = "btn btn-success" })
+
                     <input type="submit" value="Update" class="btn btn-primary">
+                    @Html.ActionLink("Cancel", "StudentHome", new { id = Model.Id }, new { @class = "btn btn-success" })
 
 
                 </div>
