@@ -5,134 +5,111 @@
 }
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<style>
-    .imgopacity {
-        opacity: 0.2;
-    }
-
-   
-  
-</style>
 
 
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li class="active">Kiosk</li>
-    </ol>
-    <body>
-        <header class=" w3-right w3-median">
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li class="active">Kiosk</li>
+</ol>
+<link href="~/Content/Kiosk.css" rel="stylesheet" />
+<body>
+    <header class=" w3-right w3-median">
 
-            <p id="demo"></p>
+        <p id="demo"></p>
+        <script src="~/Scripts/Kiosk.js"></script>
+       
+    </header>
+    <br />
+    <br />
 
-            <script>
+    <div class="panel panel-primary ">
+        <div class="panel-heading">
+            <h3 class="panel-title">Welcome friends! Please check in...</h3>
+        </div>
+        <div class="panel-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img class="img-rounded" src="~/Content/img/girl 1_crop.png" alt="display pic" style="width:100px;height:130px" />
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img class="img-rounded" src="~/Content/img/boy 4_crop.png" alt="display pic" style="width:100px;height:130px" />
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img class="img-rounded" src="~/Content/img/boy 2_crop.png" alt="display pic" style="width:100px;height:130px" />
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                var dt = new Date();
 
-                document.getElementById("demo").innerHTML = dt.toLocaleString();
+        <div class="container">
+            <!-- Trigger the modal with a button -->
+            <div class="col-md-4 text-center">
 
-                var myVar = setInterval(function () { myTimer() }, 1000);
+                Diamond
 
-                function myTimer() {
+            </div>
 
-                    var d = new Date();
+            <div class="col-md-4 text-center">
 
-                    document.getElementById("demo").innerHTML = d.toLocaleString();
+                Harry
 
-                }
 
-            </script>
-        </header>
-        <br />
-        <br />
+            </div>
+            <div class="col-md-4 text-center">
 
-        <div class="panel panel-primary ">
+                Jea
+
+            </div>
+
+
+
+            <br />
+
+
             <div class="panel-heading">
-                <h3 class="panel-title">Welcome friends! Please check in...</h3>
+
             </div>
             <div class="panel-body">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 text-center">
-                            <img class="img-rounded" src="~/Content/img/girl 1_crop.png" alt="display pic" style="width:100px;height:130px" />
+                            <img class="img-rounded" src="~/Content/img/girl 2_crop.png" alt="display pic" style="width:100px;height:130px" />
                         </div>
                         <div class="col-md-4 text-center">
-                            <img class="img-rounded" src="~/Content/img/boy 4_crop.png" alt="display pic" style="width:100px;height:130px" />
+                            <img class="img-rounded" src="~/Content/img/boy 3_crop.png" alt="display pic" style="width:100px;height:130px" />
                         </div>
                         <div class="col-md-4 text-center">
-                            <img class="img-rounded" src="~/Content/img/boy 2_crop.png" alt="display pic" style="width:100px;height:130px" />
+                            <img class="img-rounded" src="~/Content/img/boy 1_crop.png" alt="display pic" style="width:100px;height:130px" />
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-            <div class="container">
-                <!-- Trigger the modal with a button -->
-                <div class="col-md-4 text-center">
-
-                    Diamond
-
-                </div>
-
-                <div class="col-md-4 text-center">
-
-                    Harry
-
-
-                </div>
-                <div class="col-md-4 text-center">
-
-                    Jea
-
-                </div>
-
-
 
                 <br />
+                <div class="container">
+                    <!-- Trigger the modal with a button -->
+                    <div class="col-md-4 text-center ">
 
+                        Hannah
 
-                <div class="panel-heading">
-                   
-                </div>
-                <div class="panel-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 text-center">
-                                <img class="img-rounded" src="~/Content/img/girl 2_crop.png" alt="display pic" style="width:100px;height:130px" />
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <img class="img-rounded" src="~/Content/img/boy 3_crop.png" alt="display pic" style="width:100px;height:130px" />
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <img class="img-rounded" src="~/Content/img/boy 1_crop.png" alt="display pic" style="width:100px;height:130px" />
-                            </div>
-                        </div>
                     </div>
+                    <div class="col-md-4 text-center">
 
-                    <br />
-                    <div class="container">
-                        <!-- Trigger the modal with a button -->
-                        <div class="col-md-4 text-center ">
-                          
-                            Hannah
+                        John
 
-                        </div>
-                        <div class="col-md-4 text-center">
-
-                            John
-
-                        </div>
-                        <div class="col-md-4 text-center">
-
-                            Mike
-
-                        </div>
                     </div>
+                    <div class="col-md-4 text-center">
 
+                        Mike
 
+                    </div>
                 </div>
+
+
             </div>
         </div>
+    </div>
 
-    </body>
+</body>
 
