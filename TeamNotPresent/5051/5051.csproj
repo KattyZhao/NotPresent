@@ -572,14 +572,12 @@
     <Content Include="Views\Home\Privacy.cshtml" />
     <Content Include="Views\Admin\StudentHome.cshtml" />
     <Content Include="Views\Admin\Read.cshtml" />
-    <Content Include="Views\Admin\Attendance.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
     <Content Include="Views\Admin\Update.cshtml" />
     <Content Include="Views\Admin\Print.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Admin\Report.cshtml" />
     <Content Include="Views\Admin\StudentCalendar.cshtml" />
-    <Content Include="Views\Admin\CalendarEvent.cshtml" />
     <Content Include="Views\Admin\MainHome.cshtml" />
     <Content Include="Views\Student\Attendance.cshtml" />
     <Content Include="Views\Student\Calendar.cshtml" />
@@ -596,6 +594,7 @@
     <Content Include="Views\Student\NavCopy.cshtml" />
     <Content Include="Views\Kiosk\CheckIn.cshtml" />
     <Content Include="Views\Kiosk\CheckOut.cshtml" />
+    <Content Include="Views\Admin\Sync.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -235,7 +235,7 @@ namespace _5051.Controllers
 
         }
 
-        public ActionResult Print()
+        public ActionResult Sync()
         {
             return View();
         }
