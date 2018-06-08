@@ -60,12 +60,11 @@ namespace _5051.Models
 
 
         /// <summary>
-        /// Katty update this 
         /// </summary>
         [Display(Name = "Cities", Description = "Cities Purchaged")]
         public int Cities { get; set; }
 
-       
+        
 
         /// <summary>
         /// The defaults for a new student

@@ -13,5 +13,6 @@ namespace _5051.Models
         public string Body;
         public string color;
         public string Uri;
+        public string funfact; 
     }
 }

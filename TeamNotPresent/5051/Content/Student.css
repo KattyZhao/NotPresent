@@ -1,0 +1,66 @@
+﻿.w3-sidebar a {
+    font-family: "Roboto", sans-serif
+}
+
+body, h1, h2, h3, h4, h5, h6, .w3-wide {
+    font-family: "Inconsolata", sans-serif;
+}
+
+.postcards {
+    padding: 10px;
+    display: inline-block;
+}
+
+.m3 {
+    padding-top: 25px;
+}
+
+#earth_div {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+}
+
+html, body, h1, h2, h3, h4, h5 {
+    font-family: "Raleway", sans-serif
+}
+
+.w3-vivid-reddish-purple {
+    color: #fff;
+    background-color: #870074
+}
+
+.w3-vivid-blue {
+    color: #fff;
+    background-color: #00a1c2
+}
+
+.w3-vivid-yellow {
+    color: #fff;
+    background-color: #f3c300
+}
+
+.w3-vivid-purplish-blue {
+    color: #fff;
+    background-color: #30267a
+}
+
+.w3-vivid-greenish-yellow {
+    color: #fff;
+    background-color: #dcd300
+}
+
+.w3-vivid-bluish-green {
+    color: #fff;
+    background-color: #008882
+}
+
+.w3-vivid-green {
+    color: #fff;
+    background-color: #008856
+}
+
+.w3-vivid-purplish-red {
+    color: #fff;
+    background-color: #ce4676
+}

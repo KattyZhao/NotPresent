@@ -15,27 +15,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-
-    .postcards {
-        padding: 10px;
-        display: inline-block;
-    }
-
-    .m3 {
-        padding-top: 25px;
-    }
-
-    #earth_div {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-right: 25px;
-        .body, h1, h2, h3, h4, h5, h6, .w3-wide
-
-    {
-        font-family: "Inconsolata", sans-serif;
-    }
-</style>
+<link href="~/Content/Student.css" rel="stylesheet" />
 
 @*Top header
     <header class="w3-container w3-large">
@@ -144,7 +124,7 @@
                            var line2 = "marker" + count + ".bindPopup(";
 
 
-                           var line3 = DblQuote + "<div style=''><b>" + pin.Heading + "</b><br>" + pin.Body + "</br><body></div>" + DblQuote;
+                           var line3 = DblQuote + "<div style=''><b>" + pin.Heading + "</b><br>" + pin.funfact + "</br><body></div>" + DblQuote;
                            var line4 = ", { maxWidth: 120, closeButton: true });";
                            //var line2 = "marker" + count + ".bindPopup(" + '"' + pin.Heading + '"' + ", { maxWidth: 120, closeButton: false });";
                            count++;
@@ -210,7 +190,7 @@
             var index = Model.Student.Cities - 1;
             if (index >= 0)
             {
-                var l1 = "<div style = '' ><b> Congraduation! You are currently at " + Model.MapPinLocationsList[index].Heading + "</b><br>" + Model.MapPinLocationsList[index].Body + "</br></div>";
+                var l1 = "<div style = '' ><br></br><b> Congratulations! You are currently at " + Model.MapPinLocationsList[index].Heading + "</b><br>" + Model.MapPinLocationsList[index].Body + "</br></div>";
                 @Html.Raw(l1);
         }
 
@@ -219,8 +199,7 @@
 
 
         <div>
-            <br></br>
-            <br></br>
+            
             <br></br>
         </div>
         <div class="col-3">
