@@ -18,17 +18,19 @@ namespace _5051.Controllers
 
         // GET: Student
         /// <summary>
-        /// Index, the page that shows all the Students
+        /// Index,Page which has the Logout Page 
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
         {
             return View();
         }
+        //Page that consits of all the Students
         public ActionResult StudentHome()
         {
             // Load the list of data into the StudentList
             AdminProfileViewModel.StudentList = AdminBackend.StudentHome();
+            //The list view comes here
             return View(AdminProfileViewModel);
         }
 
@@ -37,32 +39,24 @@ namespace _5051.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        // GET: Student/Details/5
+        // GET: Student/Details
+        //When the student is selected, id is sent and the Page for that id is displayed
         public ActionResult Read(string id = null)
         {
             var myData = AdminBackend.Read(id);
             return View(myData);
         }
 
-        /// <summary>
-        /// This opens up the make a new Student screen
-        /// </summary>
-        /// <returns></returns>
-        // GET: Student/Create
-
-        public ActionResult Home()
-        {
-            return View();
-        }
-
+        
+       
+        //This Page displays the Student,Report, Calendar, Logout icons.
         public ActionResult MainHome()
         {
             return View();
         }
-        public ActionResult Attendance()
-        {
-            return View();
-        }
+
+
+        
 
         // GET: Student/Create
         public ActionResult Create()
@@ -77,6 +71,7 @@ namespace _5051.Controllers
         /// <param name="collection"></param>
         /// <returns></returns>
         // POST: Student/Create
+        //All the variables required to create a student is displayed
         [HttpPost]
         public ActionResult Create([Bind(Include=
                                         "Id,"+
@@ -116,24 +111,20 @@ namespace _5051.Controllers
             }
         }
 
+        //this page displays the Attendance Report for the Student
         public ActionResult Report()
         {
             return View();
         }
 
+        //The Admin can check the Student Calendar here, update it with any events and also view the holidays to schedule.
         public ActionResult StudentCalendar()
         {
             return View();
         }
-        public ActionResult CalendarAddEvent()
-        {
-            return View();
 
-        }
-        public ActionResult CalendarEvent()
-        {
-            return View();
-        }
+
+        // GET: Student/Update
         public ActionResult Update(string id = null)
         {
             var myData = AdminBackend.Read(id);
@@ -144,7 +135,7 @@ namespace _5051.Controllers
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        // POST: Student/Update/5
+        // POST: Student/Update/
         [HttpPost]
         public ActionResult Update([Bind(Include=  "Id," +
                                                    "Uri," +
@@ -183,6 +174,7 @@ namespace _5051.Controllers
             }
         }
 
+        // GET: Student/Delete
         public ActionResult Delete(string id = null)
         {
             var myData = AdminBackend.Read(id);
@@ -235,6 +227,7 @@ namespace _5051.Controllers
 
         }
 
+        //This page is just to display when Admin wants to sync the Calendar on his page to the  Calendaron Student's page so that Students can view events on their calendar.
         public ActionResult Sync()
         {
             return View();
