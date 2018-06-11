@@ -36,7 +36,10 @@ namespace _5051.Controllers
             return View();
         }
 
-
+        //<summary>
+        //get studentID
+        //return to home view
+        //</summary>
         public ActionResult Home(string id = null)
         {
 
@@ -45,7 +48,10 @@ namespace _5051.Controllers
             return View(myData);
         }
 
-
+        //<summary>
+        //get student Data passing in
+        // if student is null, use default
+        //</summary>
         public StudentHomeViewModel GetMapData(string id = null)
         {
             // Get Student passed in, if no student then default a student.
@@ -66,7 +72,7 @@ namespace _5051.Controllers
 
             // Change this in the future, add a new viewmodel, that combines the pin information with the student information for the home index
 
-            // Katty  Add more example cities, about 10
+            // 10 example cities with description
             myData.MapPinLocationsList.Add(new MapPinLocationModel { Latitude = 30.058056, Longitude = 31.228889, Heading = "Egypt", Body = "Pyramids:The ancient Egyptians built pyramids as tombs for the pharaohs and their queens." +
                 "The most famous Egyptian pyramids are those found at Giza, on the outskirts of Cairo. Several of the Giza pyramids are counted among the largest structures ever built. The Pyramid of Khufu at Giza is the largest Egyptian pyramid. It is the only one of the Seven Wonders of the Ancient World still in existence.", color = "grey", Uri = "/Content/img/card1.png", funfact = "They look like inverted ice-cream cones but are made up of sand"});
             
@@ -83,9 +89,9 @@ namespace _5051.Controllers
 
 
 
-            // Mike:  Need to change the color of the map locaitons based on the cityCount, so for 1 to CityCount, the colore is Green, and from CityCount - Total count the color is grey
+            
 
-            // Katty  Write a loop that changes the color for the first number of places
+            ///possible change pin color in the future
             int count = 0;
             foreach (var item in myData.MapPinLocationsList)
             {

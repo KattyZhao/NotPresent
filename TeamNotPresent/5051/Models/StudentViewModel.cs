@@ -33,6 +33,9 @@ namespace _5051.Models
         }
     }
 
+    /// <summary>
+    /// get/set for current studentID, current student points and student owned pin point for map
+    /// </summary>
     public class StudentClaimViewModel
     {
         public string StudentId { get; set; }
@@ -41,6 +44,9 @@ namespace _5051.Models
 
     }
 
+    /// <summary>
+    /// View Model for the Student Home, this will called the studentModel and have the list of map pin in MapPinLocationModel
+    /// </summary>
     public class StudentHomeViewModel
     {
         public StudentModel Student;
