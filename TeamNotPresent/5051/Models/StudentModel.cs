@@ -101,7 +101,7 @@ namespace _5051.Models
             // If no avatar ID is sent in, then go and get the first avatar ID from the backend data as the default to use.
             if (string.IsNullOrEmpty(avatarId))
             {
-                avatarId = AvatarBackend.Instance.GetFirstAvatarId();
+                //avatarId = AvatarBackend.Instance.GetFirstAvatarId();
             }
             AvatarId = avatarId;
         }
@@ -185,16 +185,17 @@ namespace _5051.Models
             AvatarId = data.AvatarId;
             Status = data.Status;
 
-            var myDataAvatar = AvatarBackend.Instance.Read(AvatarId);
-            if (myDataAvatar == null)
-            {
-                // Nothing to convert
-                return;
-            }
+            //    //var myDataAvatar = AvatarBackend.Instance.Read(AvatarId);
+            //    if (myDataAvatar == null)
+            //    {
+            //        // Nothing to convert
+            //        return;
+            //    }
 
-            AvatarName = myDataAvatar.Name;
-            AvatarDescription = myDataAvatar.Description;
-            AvatarUri = myDataAvatar.Uri;
+            //    AvatarName = myDataAvatar.Name;
+            //    AvatarDescription = myDataAvatar.Description;
+            //    AvatarUri = myDataAvatar.Uri;
+            //}
         }
     }
 }
